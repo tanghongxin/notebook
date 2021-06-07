@@ -18,7 +18,7 @@ pipeline {
                 dir('/usr/share/nginx') {
                     sh 'rm -rf blog.back'
                     sh 'mv blog blog.back' 
-                    sh 'mv ${WORKSPACE***REMOVED***/dist .'
+                    sh 'mv ${WORKSPACE***REMOVED***/docs/.vuepress/dist .'
                     sh 'mv dist blog'
                 ***REMOVED***
             ***REMOVED***
