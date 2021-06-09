@@ -1,6 +1,7 @@
 ***REMOVED***
 const fs = require('fs')
 const junk = require('junk')
+const _ = require('lodash')
 
 module.exports = {
   title: 'Hello VuePress',
@@ -17,44 +18,16 @@ module.exports = {
     smoothScroll: true,
     displayAllHeaders: true,
     // sidebar: 'auto',
-    sidebar: {
-      '/IT/languages/CSS/': [
-        {
-          title: '布局',
-          collapsable: true,
-          children: [
-            {
-              title: 'flex',
-              path: '/IT/languages/CSS/布局/flex.md',
-              collapsable: true
-            ***REMOVED***,
-          ]
-        ***REMOVED***,
-        {
-          title: '颜色 & 主题',
-          collapsable: true,
-          children: [
-            {
-              title: '主题',
-              // path 应当以英文、kabel-case 分割，如何自动化？
-              path: '/IT/languages/CSS/颜色 & 主题/主题.md',
-              collapsable: true
-            ***REMOVED***,
-          ]
-        ***REMOVED***,
-      ],
-      '/': [
-        ''
-      ]
-    ***REMOVED***,
+    sidebar: gSidebar(),
     nav: [
       { text: 'Home', link: '/' ***REMOVED***,
+      { text: '编程语言', items: gItems('../languages/') ***REMOVED***,
+      { text: '框架 & 类库', items: gItems('../frameworks/') ***REMOVED***,
       {
-        text: '程序视界',
+        text: '其他',
         items: [
-          { text: '编程语言', items: gItems('../IT/languages/') ***REMOVED***,
-          { text: '框架 & 类库', items: gItems('../IT/frameworks/') ***REMOVED***,
-          { text: '工具', items: gItems('../IT/tools/') ***REMOVED***,
+          { text: 'IDEA', items: gItems('../IDEA/') ***REMOVED***,
+          { text: '工具', items: gItems('../tools/') ***REMOVED***,
         ]
       ***REMOVED***,
       {
@@ -75,13 +48,34 @@ module.exports = {
   ***REMOVED***
 ***REMOVED***
 
+function gChildren(dir) {
+  return fs
+    .readdirSync(dir)
+    .filter(junk.not)
+***REMOVED***
+
 function gItems (relative) {
   return fs
     .readdirSync(path.resolve(__dirname, relative))
     .filter(junk.not)
-    .map((dir) => ({
-      text: dir,
-      link: path.normalize(`/${path.relative(__dirname, relative)***REMOVED***/${dir***REMOVED***/`),
-      absPath: path.join(__dirname, relative, dir)
+    .map((child) => ({
+      text: child,
+      link: path.normalize(`/${path.relative(__dirname, relative)***REMOVED***/${child***REMOVED***/`),
     ***REMOVED***))
+***REMOVED***
+
+function gSidebar() {
+  const sidebar = Object.create({***REMOVED***)
+  const root = path.join(__dirname, '../')
+  // 约定目录层级均为两层
+  for (const category of ['frameworks', 'languages', 'tools']) {
+    for (const docs of gChildren(path.join(root, category))) {
+      for (doc of gChildren(path.join(root, category, docs))) {
+        const key = `/${category***REMOVED***/${docs***REMOVED***/`
+        sidebar[key] = sidebar[key] || []
+        sidebar[key].push(doc === 'index.md' ? '' : doc)
+      ***REMOVED***
+    ***REMOVED***
+  ***REMOVED***
+  return sidebar
 ***REMOVED***

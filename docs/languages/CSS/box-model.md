@@ -6,16 +6,16 @@
 
 ### 边框样式
 
-- solid
-- dotted
-- dashed
+- ```solid```
+- ```dotted```
+- ```dashed```
 
 ### 盒模型样式
 
-- padding
-- margin
-- width
-- height
+- ```padding```
+- ```margin```
+- ```width```
+- ```height```
 
 [https://note.youdao.com/yws/api/personal/file/97D818DC88644519BE43F7CF6B1525BA?method=download&shareKey=ceb29d09ff73d46717073c6c0de541e1](https://note.youdao.com/yws/api/personal/file/97D818DC88644519BE43F7CF6B1525BA?method=download&shareKey=ceb29d09ff73d46717073c6c0de541e1)
 
@@ -32,13 +32,3 @@ div的高 = height + (padding + border + margin) * 2;
 div的高 = height + margin * 2;
 
 内容的高 = height - (border + padding) * 2;
-
-## 动画
-
-//TODO
-
-### CSS3动画
-
-//TODO
-
-## 换行？
