@@ -1,0 +1,4 @@
+﻿状态,为真时的 CSS 类,为假时的 CSS 类
+控件被访问过,ng-touched,ng-untouched
+控件的值变化了（脏）,ng-dirty,3ng-pristine
+控件的值有效,ng-valid,ng-invalid

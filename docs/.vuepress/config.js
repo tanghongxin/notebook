@@ -15,8 +15,38 @@ module.exports = {
   themeConfig: {
     lastUpdated: '最后更新',
     smoothScroll: true,
-    // displayAllHeaders: true,
-    sidebar: 'auto',
+    displayAllHeaders: true,
+    // sidebar: 'auto',
+    sidebar: {
+      '/IT/languages/CSS/': [
+        {
+          title: '布局',
+          collapsable: true,
+          children: [
+            {
+              title: 'flex',
+              path: '/IT/languages/CSS/布局/flex.md',
+              collapsable: true
+            ***REMOVED***,
+          ]
+        ***REMOVED***,
+        {
+          title: '颜色 & 主题',
+          collapsable: true,
+          children: [
+            {
+              title: '主题',
+              // path 应当以英文、kabel-case 分割，如何自动化？
+              path: '/IT/languages/CSS/颜色 & 主题/主题.md',
+              collapsable: true
+            ***REMOVED***,
+          ]
+        ***REMOVED***,
+      ],
+      '/': [
+        ''
+      ]
+    ***REMOVED***,
     nav: [
       { text: 'Home', link: '/' ***REMOVED***,
       {
