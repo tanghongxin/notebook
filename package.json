@@ -11,6 +11,9 @@
   "author": "hongxin.tang@hotmail.com",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-nprogress": "^1.8.2",
+    "junk": "^3.1.0",
     "vuepress": "^1.8.2"
   ***REMOVED***
 ***REMOVED***
