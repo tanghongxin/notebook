@@ -23,6 +23,7 @@ module.exports = {
       { text: 'Home', link: '/' ***REMOVED***,
       { text: '编程语言', items: gItems('../languages/') ***REMOVED***,
       { text: '框架 & 类库', items: gItems('../frameworks/') ***REMOVED***,
+      { text: '软件工程', items: gItems('../SE/') ***REMOVED***,
       {
         text: '其他',
         items: [
@@ -30,11 +31,12 @@ module.exports = {
           { text: '工具', items: gItems('../tools/') ***REMOVED***,
         ]
       ***REMOVED***,
+      { text: '树洞时间', items: gItems('../robot/') ***REMOVED***,
       {
         text: '站内管理',
         items: [
           { text: 'Jenkins', link: 'https://jenkins.abyssal.site' ***REMOVED***,
-          { text: 'Vultr', link: 'https://my.vultr.com' ***REMOVED***,
+          { text: '阿里云', link: 'https://account.aliyun.com' ***REMOVED***,
         ]
       ***REMOVED***
     ],
