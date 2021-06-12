@@ -1,5 +1,3 @@
-# 004.CSS流
-
 # 流
 
 ## 标准文档流
@@ -9,7 +7,7 @@
 - 从上往下
 - 从左往右
 
-## 浮动（流）
+## 浮动
 
 1. ```float: left;```
 2. ```float: right;```
@@ -27,12 +25,12 @@
 4. 浮动元素width未指定则根据内容显示
 5. 未清楚浮动，其下方元素会被覆盖，但内容会让出被覆盖的部分
 
-## 定位（流）
+## 定位
 
 ### 步骤
 
 1. ```position``` 决定参照物
-2. ```buttom``` ```top``` ```left``` ```right``` 决定位置
+2. ```bottom``` ```top``` ```left``` ```right``` 决定位置
 
 ### 分类
 
@@ -46,12 +44,12 @@
 
 1. 只有使用了定位 ```z-index```才有意义
 2. ```absolute```不能撑开父元素高度
-3. ```absolute``` ```fixed``` 后默认 ```display: block;``` // 未指定宽高时由内容决定
+3. ```absolute``` ```fixed``` 后默认 ```display: block;``` 未指定宽高时由内容决定
 
-## 定位与浮动的比较
+## 定位 VS 浮动
 
 - 两者都是流
 - 设置了 ```position :absolute | fixed``` 则该元素就不能设置 ```float```
-- 设置了 ```postion :relative``` 可以浮动，因为它未脱离标准文档流
+- 设置了 ```position :relative``` 可以浮动，因为它未脱离标准文档流
 - ```position: absolute``` 和 ```float``` 会隐式地改变 ```display``` 为 ```inline-block``` 并且无法修改
 - position: relative不改变 ```display ```的类型

@@ -1,8 +1,27 @@
-# CSS继承与优先级
+# 继承
 
-# 继承与优先级
+## inherit 关键字
 
-## （不）可继承的属性
+> 某些类型的属性是不会默认继承的，而某些元素则不会继承某些属性。但是在某些情况下，可以使用inherit 来强制继承，但要慎用（例如我不想重设em的斜体，然后再次添加上它）
+
+```css
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+***REMOVED***
+
+html {
+  font-size: 125%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: black;
+***REMOVED***
+```
+
+```html
+<!-- a链接颜色由蓝色被强制继承为是黑色 --><a>我是一个a链接</a>
+```
 
 ### 无继承性的属性
 
@@ -137,7 +156,7 @@
 - ```text-indent```
 - ```text-align```
 
-## 特殊的继承
+## 继承情况
 
 1. ```line-height```
 - 值为系数/百分比，后代行高 = line-height * font-size
@@ -146,72 +165,3 @@
 - 可以被继承，但不能被重写
 
 > 注：line-height为具体值，可以达到inline（-block）与文本居中对齐，但这会被inline（-block）继承下去
-
-## inherit关键字
-
-> 某些类型的属性是不会默认继承的，而某些元素则不会继承某些属性。但是在某些情况下，可以使用inherit 来强制继承，但要慎用（例如我不想重设em的斜体，然后再次添加上它）
-
-```css
-* {
-  font-family: inherit;
-  line-height: inherit;
-  color: inherit;
-***REMOVED***
-
-html {
-  font-size: 125%;
-  font-family: sans-serif;
-  line-height: 1.5;
-  color: black;
-***REMOVED***
-```
-
-```html
-<!-- a链接颜色由蓝色被强制继承为是黑色 --><a>我是一个a链接</a>
-```
-
-# 层叠
-
-> 多个来源的样式叠加在一起，结合样式特殊性与继承性确定最终的样式
-
-## 五种来源
-
-1. 浏览器默认样式
-2. 用户自定义样式
-3. 外部样式
-4. 内联样式
-5. 内部样式
-
-## 五种来源分类
-
-1. 创作人员
-2. 读者
-3. 用户代理
-
-## 层叠规则（略）
-
-- 权重
-- 特殊性
-- ```!important```
-
-# 优先级
-
-## 根据写法计算出权重（跳过）
-
-1. id选择器
-2. 子代 + 交集 + class选择器
-3. 交集 + class选择器
-4. class选择器
-5. 子代选择器
-6. 标签选择器
-
-> 案例
-
-```css
-H1 { color: blue; ***REMOVED***; // 特性值为：1P 
-EM { color: purple; ***REMOVED***; // 特性值为：2
-.apple { red;***REMOVED***; // 特性值为：10 
-P.bright { color:yellow; ***REMOVED***; // 特性值为：11
-P.bright EM.dark { color:brown; ***REMOVED***; // 特性值为：22
-#id316 { color: yellow ***REMOVED***; // 特性值为：100
-```

@@ -1,12 +1,4 @@
-# 001.CSS选择器
-
-# CSS选择器
-
-## 基本语法
-
-```css
-p { color: red; ***REMOVED***
-```
+# 选择器
 
 ## 语法结构
 
@@ -14,19 +6,19 @@ p { color: red; ***REMOVED***
 2. {***REMOVED***
 3. 属性: 值;
 
-## 选择器
+```css
+p { color: red; ***REMOVED***
+```
+
+## 类型
 
 ### 标签选择器
-
-> 直接使用标签作为选择器
 
 ```css
 div {    color: red;***REMOVED***
 ```
 
 ### 类选择器
-
-> 先定义类名，而后进行类选择 .类名
 
 ```html
 <style>
@@ -36,9 +28,7 @@ div {    color: red;***REMOVED***
 <div class="box"></div>
 ```
 
-### id选择器
-
-> 先定义ID名，而后进行id选择 #id名
+### id 选择器
 
 ```html
 <style>
@@ -69,28 +59,19 @@ div {    color: red;***REMOVED***
   <p class="box">hello</p>
 </div>
 ```
-
-## 选择器优先级
-
-交集或后代选择器 > id选择器 > class选择器 > 标签选择器
-
-
-
-# CSS高级选择器
-
-# CSS高级选择器
-
-1. 属性选择器
+### 属性选择器
 - ```[att=val]```
 - ```[att*=val]``` 匹配给定的属性是以包含某些值的元素
 - ```[att^=val]``` 匹配给定的属性是以某些值开始的元素
 - ```[att$=val]``` 匹配给定的属性是以某些值结尾的元素
-1. 伪类选择器
+
+### 伪类选择器
 - ```:link```
 - ```:visited```
 - ```:hover```
 - ```:active```
-1. 伪元素选择器（后代选择器要求必须为同一个父类）
+
+### 伪元素选择器（后代选择器要求必须为同一个父类）
 - ```:before```
 - ```:after```
 - ```:root``` 文档树的最顶层结构的元素…
@@ -107,3 +88,7 @@ li:nth-child(odd) { background:yellow; ***REMOVED***
 /*所有第偶数个子元素的样式设置*/
 li:nth-child(even) { background:red; ***REMOVED*** 
 ```
+
+## 优先级
+
+交集或后代选择器 > id选择器 > class选择器 > 标签选择器

@@ -1,6 +1,4 @@
-# CSS基本样式与重置
-
-# 基本样式（user agent stylesheet）与重置
+# User Agent Stylesheet
 
 > HTML4 部分基本样式
 
@@ -32,9 +30,7 @@ link,
 
 - css reset
 
-# 重置（reset）
-
-## 什么时候不需要reset
+### 什么时候不需要 reset
 
 - 行内元素不会应用 ```width``` 属性，其宽度由内容撑开
 - 行内元素不会应用 ```height``` 属性，其高度也是由内容撑开的，但是高度可以通过line-height调节
@@ -43,7 +39,7 @@ link,
 - 行内元素的 ```overflow``` 属性无效
 - 行内元素的 ```vertical-align``` 属性无效（```height``` 属性无效）
 
-## reset的注意
+### reset 的注意
 
 - ```float``` 元素不指定 ```width```，其 ```width``` 根据内容变化
 - 对 ```absolute``` 和f ```fixed``` 元素，设置了 ```width``` 之后，```left``` 和```right``` 同时存在，只有 ```left``` 生效；不设置 ```width```，只有 ```content``` 时，```left``` 和 ```right``` 同时生效。同样，设置了 ```height``` 之后，```top``` 和 ```bottom``` 同时存在时，只有 ```top``` 生效；不设置 ```height```，只有内容时，```top``` 和 ```bottom``` 同时生效
@@ -51,9 +47,7 @@ link,
 - 元素设置了 ```float``` 属性或者是``` absolute``` ```fixed``` 定位，那么 ```vertical-align``` 属性不再起作用
 - ```float``` 和 ```position: absolute``` 与 ```position: fixed``` 后 ```display``` 为 ```block```，未指定宽高则由内容决定
 
-## 案例（部分代码）
-
-> 天猫前端cssreset
+> 天猫前端 cssreset
 
 ```css
 body,
