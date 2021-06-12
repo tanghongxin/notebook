@@ -4,7 +4,7 @@ pipeline {
         timestamps()
     ***REMOVED***
     environment {
-        ONLINE_SITE = 'https://blog.abyssal.site'
+        ONLINE_SITE = 'https://notebook.abyssal.site'
     ***REMOVED***
     stages {
         stage('Build') { 
@@ -16,10 +16,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 dir('/usr/share/nginx') {
-                    sh 'rm -rf blog.back'
-                    sh 'mv blog blog.back' 
+                    sh 'rm -rf notebook.back'
+                    sh 'mv notebook notebook.back' 
                     sh 'mv ${WORKSPACE***REMOVED***/docs/.vuepress/dist .'
-                    sh 'mv dist blog'
+                    sh 'mv dist notebook'
                 ***REMOVED***
             ***REMOVED***
         ***REMOVED***
