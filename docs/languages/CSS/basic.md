@@ -1,52 +1,30 @@
-# CSS高级（不常用）属性
+# 基础样式
+## [background](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background)
 
-# 高级（不常用）属性
+- [background-color](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-color)
+- [background-image](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-image)
+- [background-size](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size)
+- [background-repeat](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-repeat) <Badge text="required" vertical="middle" type="warning" />
+- [background-position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position)
 
-outline-offset:outline 到 border 的距离
+## [border](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border)
 
-```css
-div { 
-  border: 4px solid black;
-  outline: 4px solid red;
-  outline-offset: 10px;
-***REMOVED***
-```
+- [outline-offset](https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline-offset)
+- [border-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-style)
+  - ```solid```
+  - ```dotted```
+  - ```dashed```
 
-# 002.CSS基础样式（上）
+## [box-sizing](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
 
-# CSS基础样式（上）
+- [width](https://developer.mozilla.org/zh-CN/docs/Web/CSS/width)
+- [height](https://developer.mozilla.org/zh-CN/docs/Web/CSS/height)
+- [padding](https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding)
+- [margin](https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin)
 
-## 文字样式
+![两种盒模型](../../../assets/images/t.png)
 
-- ```font-size```
-- ```font-family```
-- ```font-weight```
-- ```font-style```
-
-## 文本样式
-
-- ```color```
-- ```text-align```
-- ```line-height```
-- ```text-decoration```
-- ```text-indent```
-- ```vertical-align```
-- ```user-select``` CSS3
-
-## 背景样式
-
-- ```background-color```
-- ```background-image```
-- ```background-size```
-- ```background-repeat``` 必须指定
-- ```background-position```
-
-## 盒样式
-
-- ```width```
-- ```height```
-
-## 鼠标样式
+## [cursor](https://developer.mozilla.org/zh-CN/docs/Web/CSS/cursor)
 
 - ```pointer```
 - ```move```
@@ -57,8 +35,24 @@ div {
 - ```w-resize```
 - ```nw-resize```
 
-## 颜色
 
-- ```rgb:(0-255, 0-255, 0-255)``` 红绿蓝比例
-- ```rgba:(0-255, 0-255, 0-255, 0-1) ```透明度
--  ```#00ffaa ``` 同 ```0fa```
+## [font](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font)
+
+- [font-size](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size)
+- [font-family](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-family)
+- [font-weight](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight)
+- [font-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-style)
+
+## text
+
+- [color](https://developer.mozilla.org/zh-CN/docs/Web/CSS/color)
+  - ```rgb:(0-255, 0-255, 0-255)```
+  - ```rgba:(0-255, 0-255, 0-255, 0-1) ```
+  - ```#00ffaa ``` 可简写为 ```0fa```
+  - ```transparent``` ```green```
+- [line-height](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height)
+- [text-align](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-align)
+- [text-decoration](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration)
+- [text-indent](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-indent)
+- [user-select](https://developer.mozilla.org/zh-CN/docs/Web/CSS/user-select) <Badge text="CSS3" vertical="middle" />
+- [vertical-align](https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align)

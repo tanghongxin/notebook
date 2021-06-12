@@ -1,7 +1,6 @@
 ***REMOVED***
 const fs = require('fs')
 const junk = require('junk')
-const _ = require('lodash')
 
 module.exports = {
   title: 'Hello VuePress',
@@ -11,7 +10,8 @@ module.exports = {
   ***REMOVED***,
   plugins: [
     '@vuepress/back-to-top',
-    '@vuepress/nprogress'
+    '@vuepress/nprogress',
+    '@vuepress/medium-zoom'
   ],
   themeConfig: {
     lastUpdated: '最后更新',
@@ -41,13 +41,6 @@ module.exports = {
       ***REMOVED***
     ],
   ***REMOVED***,
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '~': path.resolve(__dirname, '../../')
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
 ***REMOVED***
 
 function gChildren(dir) {
@@ -75,7 +68,11 @@ function gSidebar() {
       for (doc of gChildren(path.join(root, category, docs))) {
         const key = `/${category***REMOVED***/${docs***REMOVED***/`
         sidebar[key] = sidebar[key] || []
-        sidebar[key].push(doc === 'index.md' ? '' : doc)
+        if (doc === 'index.md') {
+          sidebar[key].unshift('')
+        ***REMOVED*** else {
+          sidebar[key].push(doc)
+        ***REMOVED***
       ***REMOVED***
     ***REMOVED***
   ***REMOVED***
