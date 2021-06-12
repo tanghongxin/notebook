@@ -1,4 +1,4 @@
-# Prototype
+# 原型链
 
 ```jsx
 constructor.constructor("alert('xkjtwcp')")();

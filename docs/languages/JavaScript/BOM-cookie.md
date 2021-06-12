@@ -1,6 +1,4 @@
-# 008.JS COOKIE
-
-# COOKIE
+# Cookie
 
 ## 取值
 

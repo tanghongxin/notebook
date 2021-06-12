@@ -12,13 +12,13 @@
 4. 内联样式
 5. 内部样式
 
-## 层叠规则 <Badge text="TODO" type="warning" vertical="top" />
+## 层叠规则 <Tag text="TODO" />
 
 - 权重
 - 特殊性
 - ```!important```
 
-## 权重计算 <Badge text="TODO" type="warning" vertical="top" />
+## 权重计算 <Tag text="TODO" />
 
 1. id 选择器
 2. 子代 + 交集 + class 选择器

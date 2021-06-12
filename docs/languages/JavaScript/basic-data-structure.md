@@ -1,6 +1,4 @@
-# 002.JS数据类型（上）
-
-# 数据类型（基本）
+# 数据类型
 
 ## 数据类型的作用
 
@@ -33,7 +31,7 @@ var flag = true;
 2. ```0 ``` 等同于 ```false```
 
 ```javascript
- Number(true) == 1; 100 / 0 == Infinity; 100 / false == Infinity;
+Number(true) == 1; 100 / 0 == Infinity; 100 / false == Infinity;
 ```
 
 > 表示（常用变量名）
@@ -86,7 +84,7 @@ var arr = [1,2,3,4];var arr = new Array(1,2,3,4);
 - ```pop()``` 删除数组的最后一个元素 // 数组长度-1，并返回被删除的元素的值
 - ```unshift()``` 向数组的开头添加一个或更多元素，并返回新的长度
 - ```shift()``` 把数组的第一个元素从其中删除，并返回第一个元素的值
-- ```splice(satrt, length[, item1, item2, …])``` 向/从数组中添加/删除项目，然后返回包含被删除的项目的数组
+- ```splice(start, length[, item1, item2, …])``` 向/从数组中添加/删除项目，然后返回包含被删除的项目的数组
 - ```slice(start,end)``` 返回指定位置的数组 // 左闭右开
 - ```reverse()```
 - ```fill(val, [start, end])``` // 使用val填充数组（左闭右开) （如果填充的类型为对象，那么被赋值的是同一个内存地址的对象）
@@ -107,7 +105,7 @@ var arr = [1,2,3,4];var arr = new Array(1,2,3,4);
 ### 删除数组中间的元素
 
 - ```delete(position)``` // 不重建索引，数组下标取值为undefined 遍历输出也会跳过它
-- ```splice(satrt, length)``` // 重建索引
+- ```splice(start, length)``` // 重建索引
 
 ## Object
 
@@ -247,7 +245,8 @@ Object.keys(person).forEach(function (key) { console.log(key, person[key]) ***RE
 //创建当前日期对象
 var date = New Date();
 //创建指定日期对象
-var date = New Date('1999/02/02 12:12:12');var date = New Date('1999-02-02 12:12:12');
+var date = New Date('1999/02/02 12:12:12');
+var date = New Date('1999-02-02 12:12:12');
 ```
 
 > 非变异方法
@@ -307,3 +306,5 @@ var date = New Date('1999/02/02 12:12:12');var date = New Date('1999-02-02 12:12
   ```javascript
   /[A-Za-z0-9_]//\w/
   ```
+
+## Symbol <Tag text="TODO" />

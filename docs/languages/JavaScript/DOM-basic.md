@@ -1,6 +1,4 @@
-# 005.JS BOM DOM
-
-# DOM BOM
+# DOM
 
 ## DOM节点引用
 
@@ -49,15 +47,3 @@ var divDoms = document.getElementsByTagName('div');
 var divDomsArr = Array.prototype.slice.call(divDoms);
 var divDomsArr = [].slice.call(divDoms);
 ```
-
-## BOM操作
-
-> 同步方法
-
-- ```prompt()```
-- ```alert()```
-- ```clearInterval()```
-
-> 异步方法
-
-- ```setInterval()```

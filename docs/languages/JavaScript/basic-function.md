@@ -1,5 +1,3 @@
-# 004.JS ECMAScript函数
-
 # 函数
 
 ## 用途
@@ -39,13 +37,43 @@
 
 ## 实例化方法（跳过）
 
-1. ```function.apply([thisObk[,argArray]])```
-2. ```fuction.call([thisObj[,arg1[,arg2[,[,..argN]]]]])```
+### apply
+
+```javascript
+// 模拟实现
+Function.prototype.apply = function (ctx, argus = []) {
+  const key = new Symbol(`${Date.now()***REMOVED***-${Math.random()***REMOVED***`)
+  if (!ctx) {
+    ctx = window
+  ***REMOVED***
+  Reflect.defineProperty(this, key, this)
+  const result = ctx[key](...argus)
+  Reflect.deleteProperty(this, key)
+  return result
+***REMOVED***
+```
+
+### call
+```javascript
+// 模拟实现
+Function.prototype.call = function (ctx, ...argus) {
+  return this.apply(ctx, argus)
+***REMOVED***
+```
+
+### bind
+```javascript
+// 模拟实现
+Function.prototype.bind = function (ctx, ...argus) {
+  return function () {
+    return this.apply(ctx, argus)
+  ***REMOVED***
+***REMOVED***
+```
 
 ## 实例：this
 
-- 用来引用包含函数的对象
-- 不是函数本身（使用new关键字或call和apply除外）
+- this 始终指向运行时所属的对象，箭头函数中的 this 指向其外层作用域
 
 ## 清除
 
@@ -78,9 +106,7 @@ setTimeout(fn, 1000)
 fn = Null // 打印失败
 ```
 
-## 本地存储？
-
-## 即调函数
+## IIFE
 
 > ()()定义后立马调用
 

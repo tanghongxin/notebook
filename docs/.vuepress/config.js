@@ -3,8 +3,8 @@ const fs = require('fs')
 const junk = require('junk')
 
 module.exports = {
-  title: 'Hello VuePress',
-  description: 'Just playing around',
+  title: 'Abyssal Notebook',
+  description: '',
   markdown: {
     lineNumbers: true,
   ***REMOVED***,

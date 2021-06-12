@@ -1,8 +1,6 @@
-# 007.JS Ajax
+# Ajax
 
-# Ajax(Asynchronous Javascript and XML)
-
-> 
+Asynchronous Javascript and XML，最早在 IE 上推出。
 
 ## 原理
 
@@ -10,10 +8,11 @@
 
 ## status
 
-- ```404``` 页面找不到
+- ```401``` 鉴权不通过
+- ```404``` 资源不存在
 - ```405``` 拒绝访问
-- ```304``` 未更新（缓存下）
-- ```200``` OK
+- ```304``` 未更新（将从缓存读取）
+- ```200``` 请求成功
 
 ## readyState
 
@@ -22,19 +21,20 @@
 - ```2``` （载入完成）send()方法执行完成，已经接收到全部响应内容
 - ```3``` （交互）正在解析响应内容
 - ```4``` （完成）响应内容解析完成，可以在客户端调用了 ## 请求方法
+
+## methods
+
+- ```HEAD```
 - ```POST```
 - ```GET```
-- ```HEAD```
+- ```PUT```
+- ```PATCH```
+- ```DELETE```
 
 ## 数据格式
 
-- ```string```（JSON）
-- ```stream```（流）
-
-> JSON操作
-
-- ```parse()``` JSON字符串转JSON对象
-- ```stringify()``` JSON对象转JSON字符串
+- ```string```
+- ```stream```
 
 ## 步骤
 
