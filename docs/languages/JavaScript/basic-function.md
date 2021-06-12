@@ -35,7 +35,12 @@
 2. ```var a = function () {***REMOVED***``` // (表达式) ES5导致变量提升 ES6不提升
 3. ```[new] Function (arguments, functionBody)```
 
-## 实例化方法（跳过）
+
+## this
+
+- this 始终指向运行时所属的对象，箭头函数中的 this 指向其外层作用域
+
+## 改变 this 指向
 
 ### apply
 
@@ -46,9 +51,9 @@ Function.prototype.apply = function (ctx, argus = []) {
   if (!ctx) {
     ctx = window
   ***REMOVED***
-  Reflect.defineProperty(this, key, this)
+  Reflect.defineProperty(ctx, key, this)
   const result = ctx[key](...argus)
-  Reflect.deleteProperty(this, key)
+  Reflect.deleteProperty(ctx, key)
   return result
 ***REMOVED***
 ```
@@ -70,10 +75,6 @@ Function.prototype.bind = function (ctx, ...argus) {
   ***REMOVED***
 ***REMOVED***
 ```
-
-## 实例：this
-
-- this 始终指向运行时所属的对象，箭头函数中的 this 指向其外层作用域
 
 ## 清除
 
