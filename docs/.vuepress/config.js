@@ -1,6 +1,7 @@
 ***REMOVED***
 const fs = require('fs')
 const junk = require('junk')
+const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   title: 'Abyssal Notebook',
@@ -41,6 +42,24 @@ module.exports = {
       ***REMOVED***
     ],
   ***REMOVED***,
+  configureWebpack: (config) => {
+    config.plugins = [
+      ...config.plugins,
+      ...process.env.NODE_ENV === 'production' ? [
+        new CompressionWebpackPlugin({
+          filename: '[path].gz[query]',
+          algorithm: 'gzip',
+          test: /\.(js|css|json|txt|html|ico|svg|png|TTF)(\?.*)?$/i,
+          threshold: 10240,
+          minRatio: 0.7,
+          compressionOptions: {
+            level: 7
+          ***REMOVED***,
+          deleteOriginalAssets: false
+        ***REMOVED***)
+      ] : []
+    ]
+  ***REMOVED***
 ***REMOVED***
 
 function gChildren(dir) {
