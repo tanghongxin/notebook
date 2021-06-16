@@ -17,8 +17,15 @@ class Log {
 ***REMOVED***
 
 function now() {
-  // To ensure the server has the same timezone with locale
-  return require('dayjs').locale('zh-cn').format('YYYY-MM-DD-HH:mm:ss')
+  // To ensure the server has the same timezone with local
+  const timezone = require('dayjs/plugin/timezone')
+  const dayjs = require('dayjs')
+  require('dayjs/locale/zh-cn')
+  dayjs.extend(timezone)
+  dayjs.tz.setDefault('Asia/Shanghai')
+  dayjs.locale('zh-cn')
+  
+  return dayjs().format('YYYY-MM-DD-HH:mm:ss')
 ***REMOVED***
 
 module.exports = {
