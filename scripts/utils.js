@@ -17,15 +17,8 @@ class Log {
 ***REMOVED***
 
 function now() {
-  const d = new Date()
-  const Y = d.getFullYear()
-  const M = d.getMonth() + 1
-  const D = d.getDay()
-  const H = d.getHours()
-  const m = d.getMinutes()
-  const s = d.getSeconds()
-  const pad = num => num.toString().padStart(2, '0')
-  return `${Y***REMOVED***-${pad(M)***REMOVED***-${pad(D)***REMOVED***-${pad(H)***REMOVED***:${pad(m)***REMOVED***:${pad(s)***REMOVED***`
+  // To ensure the server has the same timezone with locale
+  return require('dayjs').locale('zh-cn').format('YYYY-MM-DD-HH:mm:ss')
 ***REMOVED***
 
 module.exports = {

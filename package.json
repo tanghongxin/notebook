@@ -15,6 +15,7 @@
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "@vuepress/plugin-nprogress": "^1.8.2",
+    "dayjs": "^1.10.5",
     "junk": "^3.1.0",
     "lodash": "^4.17.21",
     "node-***REMOVED***": "^11.1.1",
