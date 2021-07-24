@@ -82,7 +82,7 @@ function gSidebar() {
   const sidebar = Object.create({***REMOVED***)
   const root = path.join(__dirname, '../')
   // 约定目录层级均为两层
-  for (const category of ['frameworks', 'languages', 'tools']) {
+  for (const category of ['frameworks', 'languages', 'IDEA', 'tools']) {
     for (const docs of gChildren(path.join(root, category))) {
       for (doc of gChildren(path.join(root, category, docs))) {
         const key = `/${category***REMOVED***/${docs***REMOVED***/`
