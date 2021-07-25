@@ -308,3 +308,22 @@ var date = New Date('1999-02-02 12:12:12');
   ```
 
 ## Symbol <Tag text="TODO" />
+
+> Symbol
+
+每个从 `Symbol()` 返回的symbol值都是唯一的，一个symbol值能作为对象属性的标识符。
+
+```javascript
+console.log(Symbol('foo') === Symbol('foo'))
+// expected output: false
+```
+
+> Symbol.for
+
+和 `Symbol()` 不同的是，用 `Symbol.for()` 方法创建的的 symbol 会被放入一个全局 symbol 注册表中。`Symbol.for() 并不是每次都会创建一个新的 symbol`，它会首先检查给定的 key 是否已经在注册表中了。假如是，则会直接返回上次存储的那个。否则，它会再新建一个。
+
+```javascript
+console.log(Symbol.for("bar") === Symbol.for("bar"))
+// expected output: true
+```
+
