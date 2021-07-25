@@ -19,4 +19,4 @@ steps:
     yarn
     yarn build
     yarn deploy
-  displayName: 'npm install, build and deploy'
+  displayName: 'yarn install, build and deploy'
