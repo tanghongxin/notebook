@@ -4,6 +4,7 @@ const junk = require('junk')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 module.exports = {
+  theme: 'default-prefers-color-scheme',
   title: 'Abyssal Notebook',
   description: '',
   markdown: {

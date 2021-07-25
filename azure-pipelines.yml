@@ -16,7 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
-    npm run build
-    npm run deploy
+    yarn
+    yarn build
+    yarn deploy
   displayName: 'npm install, build and deploy'

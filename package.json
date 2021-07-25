@@ -20,6 +20,7 @@
     "lodash": "^4.17.21",
     "node-***REMOVED***": "^11.1.1",
     "vuepress": "^1.8.2",
+    "vuepress-theme-default-prefers-color-scheme": "^2.0.0",
     "zip-a-folder": "^1.0.1"
   ***REMOVED***,
   "dependencies": {
