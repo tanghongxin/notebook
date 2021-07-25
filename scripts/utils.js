@@ -16,6 +16,7 @@ class Log {
   ***REMOVED***
 ***REMOVED***
 
+// FIXME: tz does not work on azure
 function now() {
   // To ensure the server has the same timezone with local
   const timezone = require('dayjs/plugin/timezone')
