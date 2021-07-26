@@ -1,20 +1,27 @@
-# Hello World
+# Abyssal Notebook
 
-## 🎉 建站缘由
+## What?
 
-多年以来，我一直在寻求笔记工具的平衡：轻便、美观、高效与较佳的 SEO。
+Personal technical notebook collections based on VuePress
 
-在经历「有道云笔记」、「印象笔记」、「Notion」的几番体验之后，我开始尝试搭建自己的博客。与传统笔记理念不同，我更倾向于称呼它为「小天地」。我在这里记录自己的随笔：编程、音乐、人生、阅读与思考。
+## Where?
 
-## 🧐 为什么不是...
+[Online]([Hello World | Abyssal Notebook](https://notebook.abyssal.site))
 
-感谢陈皓老师的 [为什么我不在微信公众号上写文章](https://coolshell.cn/articles/17391.html)，让我坚定建站的念头。我认同文章的价值应当在内容本身，而不该被传播方式局限；恰巧联网与生俱来一种去中心化的基因，借此我希望我的文字可以因此一直漂流在宇宙的某个地方。
+## When?
 
-说来有趣，选择```vue-press```作为搭建工具，这篇文章却是在```Typora```下诞生；所见即所得，仿佛我思故我在。
+Init on Jun 7, 2021
 
-## 🤡 关于我
+## Who?
 
-```
-现实与理想之间说诚实的梦话
-```
+[Me]([tanghongxin (github.com)](https://github.com/tanghongxin)), one of the ordinary developers
 
+## Why?
+
+ Knowledge needs sorting out, like out lives
+
+Static website is the fastest way to write and help me focus on writing
+
+## How?
+
+Keep reading and thinking, stay away from coding
