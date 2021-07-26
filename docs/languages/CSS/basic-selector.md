@@ -3,11 +3,11 @@
 ## 语法结构
 
 1. 选择器
-2. {***REMOVED***
+2. {}
 3. 属性: 值;
 
 ```css
-p { color: red; ***REMOVED***
+p { color: red; }
 ```
 
 ## 类型
@@ -15,14 +15,14 @@ p { color: red; ***REMOVED***
 ### 标签选择器
 
 ```css
-div {    color: red;***REMOVED***
+div {    color: red;}
 ```
 
 ### 类选择器
 
 ```html
 <style>
-  .box { color: red; ***REMOVED***
+  .box { color: red; }
 </style>
 
 <div class="box"></div>
@@ -32,7 +32,7 @@ div {    color: red;***REMOVED***
 
 ```html
 <style>
-  #box { color: red; ***REMOVED***
+  #box { color: red; }
 </style>
 
 <div id="box"></div>
@@ -42,7 +42,7 @@ div {    color: red;***REMOVED***
 
 ```html
 <style>
-  div.box { color: red; ***REMOVED***
+  div.box { color: red; }
 </style>
 
 <div class="box"></div>
@@ -52,7 +52,7 @@ div {    color: red;***REMOVED***
 
 ```html
 <style>
-  .parent .box { color: red; ***REMOVED***
+  .parent .box { color: red; }
 </style>
 
 <div class="parent">
@@ -84,9 +84,9 @@ div {    color: red;***REMOVED***
 
 ```css
 /*所有第奇数个子元素的样式设置*/
-li:nth-child(odd) { background:yellow; ***REMOVED***
+li:nth-child(odd) { background:yellow; }
 /*所有第偶数个子元素的样式设置*/
-li:nth-child(even) { background:red; ***REMOVED*** 
+li:nth-child(even) { background:red; } 
 ```
 
 ## 优先级

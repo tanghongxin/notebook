@@ -3,18 +3,18 @@
 > HTML4 部分基本样式
 
 ```css
-th { font-weight: bolder; text-align: center; ***REMOVED***;
-caption { text-align: center; ***REMOVED***
-body { margin: 8px; ***REMOVED***;
-h1 { font-size: 2em; margin: .67em 0; ***REMOVED***
+th { font-weight: bolder; text-align: center; };
+caption { text-align: center; }
+body { margin: 8px; };
+h1 { font-size: 2em; margin: .67em 0; }
 button,
 textarea,
 input,
 object,
-select { display:inline-block; ***REMOVED***
-strong { font-weight: bolder; ***REMOVED***
+select { display:inline-block; }
+strong { font-weight: bolder; }
 link,
-:visited { text-decoration: underline; ***REMOVED***
+:visited { text-decoration: underline; }
 ```
 
 ## 形成原因
@@ -54,19 +54,19 @@ body,
 h1 ,h2, h3, h4, h5, h6, hr, p,
 blockquote, dl, dt, dd, ul, ol, li, pre,
 form, fieldset, legend, button, input, textarea,
-th, td { margin: 0; padding: 0; ***REMOVED*** 
+th, td { margin: 0; padding: 0; } 
 
 body, button, input, select, textarea {
   font: 12px "microsoft yahei";
   line-height: 1.5;
   -ms-overflow-style: scrollbar;
-***REMOVED***
+}
 
-h1, h2, h3, h4, h5, h6 { font-size: 100%; ***REMOVED***
-ul, ol { list-style: none;***REMOVED***
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+ul, ol { list-style: none;}
 
-a { text-decoration: none; cursor:pointer; ***REMOVED***
-a:hover { text-decoration: underline; ***REMOVED***
+a { text-decoration: none; cursor:pointer; }
+a:hover { text-decoration: underline; }
 
-img { border: 0 ***REMOVED***
+img { border: 0 }
 ```

@@ -53,32 +53,32 @@ a --
 
 ```javascript
 var a = 0, b = 1
-if (a > b) {***REMOVED***
-if (a < b) {***REMOVED***
-if (a == b) {***REMOVED***
-if (a === b) {***REMOVED***
-if (a >= b) {***REMOVED***
-if (a <= b) {***REMOVED***
+if (a > b) {}
+if (a < b) {}
+if (a == b) {}
+if (a === b) {}
+if (a >= b) {}
+if (a <= b) {}
 ```
 
 > 逻辑运算符
 
 ```javascript
 var a = 0, b = 1
-if(a == 1 && b == 1) {***REMOVED***
-if(a !== 1 || b == 1) {***REMOVED***
+if(a == 1 && b == 1) {}
+if(a !== 1 || b == 1) {}
 ```
 
 > 隐式转换
 
 ```javascript
-if(0) {***REMOVED***
-if(1) {***REMOVED***
-if(true) {***REMOVED***
-if(false) {***REMOVED***
-if(null) {***REMOVED***
-if(undefined) {***REMOVED***
-if('hello world') {***REMOVED***
+if(0) {}
+if(1) {}
+if(true) {}
+if(false) {}
+if(null) {}
+if(undefined) {}
+if('hello world') {}
 ```
 
 > 其他运算符
@@ -93,21 +93,21 @@ if('hello world') {***REMOVED***
 > while
 
 ```javascript
-var i = 0;while(i < 10) {    i++;***REMOVED***;
+var i = 0;while(i < 10) {    i++;};
 ```
 
 > for
 
 ```javascript
-for (var i = 0; i < 10; i++) {***REMOVED***;
+for (var i = 0; i < 10; i++) {};
 ```
 
 > if else
 
 ```javascript
-var i = 0;if (i === 0) {***REMOVED*** 
-else if (if === 1) {***REMOVED***
-else {***REMOVED***
+var i = 0;if (i === 0) {} 
+else if (if === 1) {}
+else {}
 ```
 
 > switch case
@@ -118,5 +118,5 @@ switch(new Date().getDay()) {
     break
   default
     break
-***REMOVED***
+}
 ```

@@ -48,13 +48,13 @@
 > ie事件对象
 
 ```javascript
-window.onload = function () {    console.log(window.event);***REMOVED***;
+window.onload = function () {    console.log(window.event);};
 ```
 
 > 其他浏览器事件对象
 
 ```javascript
-window.onload = function(event) {    console.log(event);***REMOVED***;
+window.onload = function(event) {    console.log(event);};
 ```
 
 # 属性
@@ -72,12 +72,12 @@ window.onload = function(event) {    console.log(event);***REMOVED***;
 
 ```javascript
 // 计算鼠标所属位置在某个元素的相对位置
-const { top, left ***REMOVED*** = element.getBoundingClientRect(
-const { pageX, pageY, screenX, screenY ***REMOVED*** = event 
+const { top, left } = element.getBoundingClientRect(
+const { pageX, pageY, screenX, screenY } = event 
 const style = {
 	top: pageY - top,
 	left: pageX - left
-***REMOVED***
+}
 ```
 
 > DOM Element 属性（无单位）

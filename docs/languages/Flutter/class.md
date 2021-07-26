@@ -9,7 +9,7 @@
 - .runtimeType 获取当前实例所属的类
 
   ```
-  print('The type of a is ${a.runtimeType***REMOVED***');
+  print('The type of a is ${a.runtimeType}');
   ```
 
 - 普通构造函数
@@ -23,8 +23,8 @@
       // There's a better way to do this, stay tuned.
       this.x = x;
       this.y = y;
-    ***REMOVED***
-  ***REMOVED***
+    }
+  }
   
   // 语法糖
   class Point {
@@ -33,7 +33,7 @@
     // Syntactic sugar for setting x and y
     // before the constructor body runs.
     Point(this.x, this.y);
-  ***REMOVED***
+  }
   ```
 
   相当于 TypeScript 中的
@@ -45,14 +45,14 @@
       construcor (x, y) {
           this.x = x
           this.y = y
-      ***REMOVED***
-  ***REMOVED***
+      }
+  }
   
   class point {
       private x: number
       private y: number
-      construcor (private x, private y) {***REMOVED***
-  ***REMOVED***
+      construcor (private x, private y) {}
+  }
   ```
 
   构造函数之外的函数，不用 this，默认指向 this?

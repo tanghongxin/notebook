@@ -6,9 +6,9 @@
 
 // exports === modules.exports
 
-// module.exports = () => {***REMOVED***
+// module.exports = () => {}
 
-// export = () => {***REMOVED*** !xxx 会重新指向而非指向到module.exports
+// export = () => {} !xxx 会重新指向而非指向到module.exports
 
 ## AMD <Tag text="TODO" />
 

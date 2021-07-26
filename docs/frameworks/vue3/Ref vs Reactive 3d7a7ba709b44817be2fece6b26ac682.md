@@ -5,11 +5,11 @@
 接受一个传入对象，返回经由 Proxy 修饰过的响应式对象，__v_reactive 指向自身
 
 ```jsx
-import { reactive ***REMOVED*** from 'vue'
+import { reactive } from 'vue'
 
-const obj = { name: 'name' ***REMOVED***
+const obj = { name: 'name' }
 const reactiveObj = reactive(obj)
-// 输出 Proxy {name: "name", __v_reactive: Proxy***REMOVED***
+// 输出 Proxy {name: "name", __v_reactive: Proxy}
 console.log(reactiveObj)
 ```
 
@@ -18,20 +18,20 @@ console.log(reactiveObj)
 接受一个变量，返回一个对象，__v_isRef 为 true，变量类型为复杂类型时，value 为经 reactive 修饰过的变量，反之为原变量
 
 ```jsx
-import { ref***REMOVED*** from 'vue'
+import { ref} from 'vue'
 
-const obj = { name: 'name' ***REMOVED***
+const obj = { name: 'name' }
 const refObj = ref(obj)
 
-// 输出 { value: Proxy, __v_isRef: true ***REMOVED***
+// 输出 { value: Proxy, __v_isRef: true }
 console.log(refObj)
-// 输出 Proxy {name: "name", __v_reactive: Proxy***REMOVED***
+// 输出 Proxy {name: "name", __v_reactive: Proxy}
 console.log(refObj.value)
 
 const flag = true
 const refFlag = ref(flag)
 
-// 输出 { value: true, __v_isRef: true ***REMOVED***
+// 输出 { value: true, __v_isRef: true }
 console.log(refFlag)
 // 输出 true
 console.log(refFlag.value)
@@ -45,7 +45,7 @@ console.log(refFlag.value)
 const state = reactive({
   foo: 1,
   bar: 2,
-***REMOVED***)
+})
 
 const stateAsRefs = toRefs(state)
 /*
@@ -54,7 +54,7 @@ stateAsRefs 的类型如下:
 {
   foo: Ref<number>,
   bar: Ref<number>
-***REMOVED***
+}
 */
 ```
 
@@ -67,23 +67,23 @@ function useFeatureX() {
   const state = reactive({
     foo: 1,
     bar: 2,
-  ***REMOVED***)
+  })
 
   // 对 state 的逻辑操作
 
   // 返回时将属性都转为 ref
   return toRefs(state)
-***REMOVED***
+}
 
 export default {
   setup() {
     // 可以解构，不会丢失响应性
-    const { foo, bar ***REMOVED*** = useFeatureX()
+    const { foo, bar } = useFeatureX()
 
     return {
       foo,
       bar,
-    ***REMOVED***
-  ***REMOVED***,
-***REMOVED***
+    }
+  },
+}
 ```

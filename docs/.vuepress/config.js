@@ -1,4 +1,4 @@
-***REMOVED***
+const path = require('path')
 const fs = require('fs')
 const junk = require('junk')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
@@ -9,7 +9,7 @@ module.exports = {
   description: '',
   markdown: {
     lineNumbers: true,
-  ***REMOVED***,
+  },
   plugins: [
     '@vuepress/back-to-top',
     '@vuepress/nprogress',
@@ -22,27 +22,27 @@ module.exports = {
     // sidebar: 'auto',
     sidebar: gSidebar(),
     nav: [
-      { text: 'Home', link: '/' ***REMOVED***,
-      { text: '编程语言', items: gItems('../languages/') ***REMOVED***,
-      { text: '框架 & 类库', items: gItems('../frameworks/') ***REMOVED***,
-      { text: '软件工程', items: gItems('../SE/') ***REMOVED***,
+      { text: 'Home', link: '/' },
+      { text: '编程语言', items: gItems('../languages/') },
+      { text: '框架 & 类库', items: gItems('../frameworks/') },
+      { text: '软件工程', items: gItems('../SE/') },
       {
         text: '其他',
         items: [
-          { text: 'IDEA', items: gItems('../IDEA/') ***REMOVED***,
-          { text: '工具', items: gItems('../tools/') ***REMOVED***,
+          { text: 'IDEA', items: gItems('../IDEA/') },
+          { text: '工具', items: gItems('../tools/') },
         ]
-      ***REMOVED***,
-      { text: '树洞时间', items: gItems('../robot/') ***REMOVED***,
+      },
+      { text: '树洞时间', items: gItems('../robot/') },
       {
         text: '站内管理',
         items: [
-          { text: 'Jenkins', link: 'https://jenkins.abyssal.site' ***REMOVED***,
-          { text: '阿里云', link: 'https://account.aliyun.com' ***REMOVED***,
+          { text: 'Jenkins', link: 'https://jenkins.abyssal.site' },
+          { text: '阿里云', link: 'https://account.aliyun.com' },
         ]
-      ***REMOVED***
+      }
     ],
-  ***REMOVED***,
+  },
   configureWebpack: (config) => {
     config.plugins = [
       ...config.plugins,
@@ -55,19 +55,19 @@ module.exports = {
           minRatio: 0.7,
           compressionOptions: {
             level: 7
-          ***REMOVED***,
+          },
           deleteOriginalAssets: false
-        ***REMOVED***)
+        })
       ] : []
     ]
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 function gChildren(dir) {
   return fs
     .readdirSync(dir)
     .filter(junk.not)
-***REMOVED***
+}
 
 function gItems (relative) {
   return fs
@@ -75,26 +75,26 @@ function gItems (relative) {
     .filter(junk.not)
     .map((child) => ({
       text: child,
-      link: path.normalize(`/${path.relative(__dirname, relative)***REMOVED***/${child***REMOVED***/`),
-    ***REMOVED***))
-***REMOVED***
+      link: path.normalize(`/${path.relative(__dirname, relative)}/${child}/`),
+    }))
+}
 
 function gSidebar() {
-  const sidebar = Object.create({***REMOVED***)
+  const sidebar = Object.create({})
   const root = path.join(__dirname, '../')
   // 约定目录层级均为两层
   for (const category of ['frameworks', 'languages', 'IDEA', 'tools']) {
     for (const docs of gChildren(path.join(root, category))) {
       for (doc of gChildren(path.join(root, category, docs))) {
-        const key = `/${category***REMOVED***/${docs***REMOVED***/`
+        const key = `/${category}/${docs}/`
         sidebar[key] = sidebar[key] || []
         if (doc === 'index.md') {
           sidebar[key].unshift('')
-        ***REMOVED*** else {
+        } else {
           sidebar[key].push(doc)
-        ***REMOVED***
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
+        }
+      }
+    }
+  }
   return sidebar
-***REMOVED***
+}

@@ -6,8 +6,8 @@ export default {
       text: String,
       default: '',
       required: true
-    ***REMOVED***
-  ***REMOVED***,
+    }
+  },
   render (h) {
     switch (this.text.toUpperCase()) {
       case 'CSS3':
@@ -16,7 +16,7 @@ export default {
         return <Badge text="TODO" type="warning" />
       default:
         return h()
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    }
+  }
+}
 </script>

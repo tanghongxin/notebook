@@ -114,7 +114,7 @@ var arr = [1,2,3,4];var arr = new Array(1,2,3,4);
 > 字面量创建
 
 ```javascript
-var person = { name: 'Tang', age: 18 ***REMOVED***
+var person = { name: 'Tang', age: 18 }
 person = new Object(); person.name = 'Tang'; person.age = 18
 ```
 
@@ -132,7 +132,7 @@ function person (firstname, lastname, age, eyecolor) {
   this.lastname = lastname
   this.age = age
   this.eyecolor = eyecolor
-***REMOVED***;
+};
 var myFather = new person('Bill', 'Gates', 56, 'blue')
 ```
 
@@ -143,7 +143,7 @@ var myFather = new person('Bill', 'Gates', 56, 'blue')
 > 读取
 
 ```javascript
-var person = { name: 'Tang', age: 18 ***REMOVED***
+var person = { name: 'Tang', age: 18 }
 console.log(person.name)
 var n = 'name'; console.log(person.n)
 // 报错console.log(person.[n]);//Object自身有name属性console.log(person.name);
@@ -152,7 +152,7 @@ var n = 'name'; console.log(person.n)
 > 删除
 
 ```javascript
-var person = { name: 'Tang', age: 18 ***REMOVED***
+var person = { name: 'Tang', age: 18 }
 delete person.name
 ```
 
@@ -161,14 +161,14 @@ delete person.name
 - ```in ```检测属性是否存在
 
 ```javascript
-var person = { name: 'Tang', age: 18 ***REMOVED***
+var person = { name: 'Tang', age: 18 }
 alert(('name' in person)) // true
 ```
 
 - ```hasOwnProperty``` 检测是否为自定义属性
 
 ```javascript
-var person = { name: 'Tang', age: 18 ***REMOVED***
+var person = { name: 'Tang', age: 18 }
 alert(person.hasOwnProperty('name')) // true
 ```
 
@@ -179,15 +179,15 @@ alert(person.hasOwnProperty('name')) // true
 > for…in…
 
 ```javascript
-var person = { name: 'Tang', age: 18 ***REMOVED***
-for (var k in person) { console.log(person[k]) ***REMOVED***;
+var person = { name: 'Tang', age: 18 }
+for (var k in person) { console.log(person[k]) };
 ```
 
 > Object.keys()遍历
 
 ```javascript
-var person = { name: 'Tang', age: 18 ***REMOVED***
-Object.keys(person).forEach(function (key) { console.log(key, person[key]) ***REMOVED***)
+var person = { name: 'Tang', age: 18 }
+Object.keys(person).forEach(function (key) { console.log(key, person[key]) })
 ```
 
 ## Number
@@ -280,13 +280,13 @@ var date = New Date('1999-02-02 12:12:12');
 - 匹配电话
 
   ```javascript
-  /^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8***REMOVED***$/
+  /^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$/
   ```
 
 - 指定长度的数字
 
   ```javascript
-   /^\d{6***REMOVED***$/ /^[0-9]{6***REMOVED***$/
+   /^\d{6}$/ /^[0-9]{6}$/
   ```
 
 - 非数字

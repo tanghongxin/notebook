@@ -31,7 +31,7 @@
 - ```wait```
 - ```help```
 - ```text```
-- ```cro***REMOVED***air```
+- ```crosshair```
 - ```w-resize```
 - ```nw-resize```
 

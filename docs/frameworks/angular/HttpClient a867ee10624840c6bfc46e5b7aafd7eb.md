@@ -9,8 +9,8 @@ const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
     'Authorization': 'my-auth-token'
-  ***REMOVED***)
-***REMOVED***;
+  })
+};
 
 // param@ url  请求路径
 // param@ data 发送数据
@@ -19,8 +19,8 @@ const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
     'Authorization': 'my-auth-token'
-  ***REMOVED***)
-***REMOVED***;
+  })
+};
 
 this.http.post<Hero>(this.heroesUrl, hero, httpOptions)
     .pipe(
@@ -35,13 +35,13 @@ searchHeroes(term: string): Observable<Hero[]> {
   term = term.trim();
   // Add safe, URL encoded search parameter if there is a search term
   const options = term ?
-   { params: new HttpParams().set('name', term) ***REMOVED*** : {***REMOVED***;
+   { params: new HttpParams().set('name', term) } : {};
 
   return this.http.get<Hero[]>(this.heroesUrl, options)
     .pipe(
       // TODO
     );
-***REMOVED***
+}
 ```
 
 > 注：必须调用 subscribe()或pipe()，否则什么都不会发生

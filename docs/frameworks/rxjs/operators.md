@@ -19,7 +19,7 @@
   将多个 Observable 组合以创建一个 Observable，如果最后一个参数是函数, 这个函数被用来计算最终发出的值.否则, 返回一个顺序包含所有输入值的数组
 
   ```
-  let age$ = Observable.of<number>(27, 25, 29);let name$ = Observable.of<string>('Foo', 'Bar', 'Beer');let isDev$ = Observable.of<boolean>(true, true, false);Observable    .zip(age$,         name$,         isDev$,         (age: number, name: string, isDev: boolean) => ({ age, name, isDev ***REMOVED***))    .subscribe(x => console.log(x));// 输出：// { age: 27, name: 'Foo', isDev: true ***REMOVED***// { age: 25, name: 'Bar', isDev: true ***REMOVED***// { age: 29, name: 'Beer', isDev: false ***REMOVED***
+  let age$ = Observable.of<number>(27, 25, 29);let name$ = Observable.of<string>('Foo', 'Bar', 'Beer');let isDev$ = Observable.of<boolean>(true, true, false);Observable    .zip(age$,         name$,         isDev$,         (age: number, name: string, isDev: boolean) => ({ age, name, isDev }))    .subscribe(x => console.log(x));// 输出：// { age: 27, name: 'Foo', isDev: true }// { age: 25, name: 'Bar', isDev: true }// { age: 29, name: 'Beer', isDev: false }
   ```
 
 - mapTo

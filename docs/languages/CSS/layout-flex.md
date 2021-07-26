@@ -25,7 +25,7 @@
 .box {
 	/* 默认 */
 	flex-flow: row nowrap;
-***REMOVED***
+}
 ```
 
 ### [justify-content](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content)

@@ -28,10 +28,10 @@
 6. 标签选择器
 
 ```css
-h1 { color: blue; ***REMOVED*** /* 特性值：1P */
-em { color: blue; ***REMOVED*** /* 特性值：2 */
-.apple { color: blue;***REMOVED*** /* 特性值：10 */
-p.bright { color:blue; ***REMOVED*** /* 特性值：11 */
-p.bright em.dark { color: blue; ***REMOVED*** /* 特性值：22 */
-#id { blue: blue ***REMOVED*** /* 特性值：100 */
+h1 { color: blue; } /* 特性值：1P */
+em { color: blue; } /* 特性值：2 */
+.apple { color: blue;} /* 特性值：10 */
+p.bright { color:blue; } /* 特性值：11 */
+p.bright em.dark { color: blue; } /* 特性值：22 */
+#id { blue: blue } /* 特性值：100 */
 ```

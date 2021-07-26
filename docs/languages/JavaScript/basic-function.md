@@ -32,7 +32,7 @@
 ## 声明
 
 1. ```function``` // (关键字)会导致函数提升
-2. ```var a = function () {***REMOVED***``` // (表达式) ES5导致变量提升 ES6不提升
+2. ```var a = function () {}``` // (表达式) ES5导致变量提升 ES6不提升
 3. ```[new] Function (arguments, functionBody)```
 
 
@@ -47,15 +47,15 @@
 ```javascript
 // 模拟实现
 Function.prototype.apply = function (ctx, argus = []) {
-  const key = new Symbol(`${Date.now()***REMOVED***-${Math.random()***REMOVED***`)
+  const key = new Symbol(`${Date.now()}-${Math.random()}`)
   if (!ctx) {
     ctx = window
-  ***REMOVED***
+  }
   Reflect.defineProperty(ctx, key, this)
   const result = ctx[key](...argus)
   Reflect.deleteProperty(ctx, key)
   return result
-***REMOVED***
+}
 ```
 
 ### call
@@ -63,7 +63,7 @@ Function.prototype.apply = function (ctx, argus = []) {
 // 模拟实现
 Function.prototype.call = function (ctx, ...argus) {
   return this.apply(ctx, argus)
-***REMOVED***
+}
 ```
 
 ### bind
@@ -72,8 +72,8 @@ Function.prototype.call = function (ctx, ...argus) {
 Function.prototype.bind = function (ctx, ...argus) {
   return function () {
     return this.apply(ctx, argus)
-  ***REMOVED***
-***REMOVED***
+  }
+}
 ```
 
 ## 清除
@@ -82,7 +82,7 @@ Function.prototype.bind = function (ctx, ...argus) {
 // setTimeout 异步
 var time = setInterval(function () {
     //
-***REMOVED***, 1000);
+}, 1000);
 
 clear(time); //重新初始化变量
 time = Null; //销毁变量
@@ -102,7 +102,7 @@ time = Null; //销毁变量
 ```javascript
 var fn = function () {
 	console.log("hello")
-***REMOVED***
+}
 setTimeout(fn, 1000)
 fn = Null // 打印失败
 ```
@@ -116,6 +116,6 @@ fn = Null // 打印失败
 - 解决作用域污染
 
 ```javascript
-(function test () {    console.log("hello");***REMOVED***)();//打印hellotest();//打印失败
+(function test () {    console.log("hello");})();//打印hellotest();//打印失败
 ```
 

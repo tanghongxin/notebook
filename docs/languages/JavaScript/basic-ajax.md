@@ -56,6 +56,6 @@ xhr.onreadystatechange = function () {
   if (xhr.readyState === 4 && xhr.status === 200) {
     var res = xhr.response
     var resJson = JSON.parse(res); console.log(resJson)
-  ***REMOVED***
-***REMOVED***
+  }
+}
 ```

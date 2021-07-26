@@ -18,5 +18,5 @@ steps:
 - script: |
     yarn
     yarn build
-    yarn deploy
+    yarn deploy $(HOST) $(USERNAME) $(PASSWORD)
   displayName: 'yarn install, build and deploy'

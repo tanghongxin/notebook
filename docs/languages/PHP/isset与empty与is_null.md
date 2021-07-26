@@ -15,7 +15,7 @@
 > 解决0为空
 
 ```
-$a = 0;if ($a === '' || empty($a) {    echo '值为空';***REMOVED***
+$a = 0;if ($a === '' || empty($a) {    echo '值为空';}
 ```
 
 # isset

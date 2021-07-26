@@ -9,14 +9,14 @@
   font-family: inherit;
   line-height: inherit;
   color: inherit;
-***REMOVED***
+}
 
 html {
   font-size: 125%;
   font-family: sans-serif;
   line-height: 1.5;
   color: black;
-***REMOVED***
+}
 ```
 
 ```html

@@ -46,10 +46,10 @@
 
 > $是jQuery的别称 jQuery可以有多个入口函数（按顺序执行）
 
-- $(‘document’).ready(function () {***REMOVED*** )
-- $(function () {***REMOVED*** )
-- jQuery(‘document’).ready(function () {***REMOVED*** )
-- jQuery(function () {***REMOVED*** )
+- $(‘document’).ready(function () {} )
+- $(function () {} )
+- jQuery(‘document’).ready(function () {} )
+- jQuery(function () {} )
 
 ## jQuery对象与DOM对象
 
@@ -67,7 +67,7 @@ $('audio')[0].play();// 等同于$('audio').get(0).play();var btnDom = getElemen
 - noConflict() 释放$标识符
 
 ```
-// demo1$.noConflict();jQuery(document).ready(function(){  jQuery("button").click(function(){    jQuery("p").text("jQuery 仍在运行！");  ***REMOVED***);***REMOVED***);// demo2var jq = $.noConflict();jq(document).ready(function(){  jq("button").click(function(){    jq("p").text("jQuery 仍在运行！");  ***REMOVED***);***REMOVED***);// demo3 把 $ 符号作为变量传递给 ready 方法$.noConflict();jQuery(document).ready(function($){  $("button").click(function(){    $("p").text("jQuery 仍在运行！");  ***REMOVED***);***REMOVED***);
+// demo1$.noConflict();jQuery(document).ready(function(){  jQuery("button").click(function(){    jQuery("p").text("jQuery 仍在运行！");  });});// demo2var jq = $.noConflict();jq(document).ready(function(){  jq("button").click(function(){    jq("p").text("jQuery 仍在运行！");  });});// demo3 把 $ 符号作为变量传递给 ready 方法$.noConflict();jQuery(document).ready(function($){  $("button").click(function(){    $("p").text("jQuery 仍在运行！");  });});
 ```
 
 # 003.jQuery基本操作
@@ -111,7 +111,7 @@ let attrA = $('input').attr("checked"); // 返回undefined而非falselet propA =
 - scrollLeft([number]) ~~~左侧偏移
 
 ```
-$("p").css("background-color", 'red'); // 设置单个csscss({"background-color":"red","font-size":"14px"***REMOVED***); //设置多个css
+$("p").css("background-color", 'red'); // 设置单个csscss({"background-color":"red","font-size":"14px"}); //设置多个css
 ```
 
 ### 事件
@@ -121,7 +121,7 @@ $("p").css("background-color", 'red'); // 设置单个csscss({"background-color"
 - trigger()
 
 ```
-// demo1事件绑定$('li').click(function () {    $(this).css('background-color', 'red');***REMOVED***);// 等同于$('li').on('click', function () {    $(this).css('background-color', 'red');***REMOVED***)// demo2事件委托$('ul').on('click', 'li', [,data] function () {    $(this).css('background-color', 'red');***REMOVED***)
+// demo1事件绑定$('li').click(function () {    $(this).css('background-color', 'red');});// 等同于$('li').on('click', function () {    $(this).css('background-color', 'red');})// demo2事件委托$('ul').on('click', 'li', [,data] function () {    $(this).css('background-color', 'red');})
 ```
 
 ### 文本
@@ -167,13 +167,13 @@ $("p").css("background-color", 'red'); // 设置单个csscss({"background-color"
 - $.each() 遍历数组
 
 ```
-var arr=[1,2,3,4];$.each(arr,function(i,n){    alert("索引" + i + "对应的值" + n);***REMOVED***);
+var arr=[1,2,3,4];$.each(arr,function(i,n){    alert("索引" + i + "对应的值" + n);});
 ```
 
 - each() 为每个匹配元素规定运行的函数
 
 ```
-$("button").click(function(){  $("li").each(function(){ // function(index,element)默认    alert($(this).text())  ***REMOVED***);***REMOVED***);
+$("button").click(function(){  $("li").each(function(){ // function(index,element)默认    alert($(this).text())  });});
 ```
 
 ### ajax

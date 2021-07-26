@@ -7,7 +7,7 @@
 - 初始化
 
 ```
-# 字面量{'jack': 4098, 'sape': 4139, 'guido': 4127***REMOVED***{x: x**2 for x in (2, 4, 6)***REMOVED***# 输出 {2: 4, 4: 16, 6: 36***REMOVED***# 构造函数（类似 js Object.fromEntries？）dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])dict(sape=4139, guido=4127, jack=4098)
+# 字面量{'jack': 4098, 'sape': 4139, 'guido': 4127}{x: x**2 for x in (2, 4, 6)}# 输出 {2: 4, 4: 16, 6: 36}# 构造函数（类似 js Object.fromEntries？）dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])dict(sape=4139, guido=4127, jack=4098)
 ```
 
 - 删除键值对

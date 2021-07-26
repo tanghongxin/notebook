@@ -11,7 +11,7 @@
 > 一段CSS代码
 
 ```
-body {    font-size: 16px***REMOVED***p {    font-weight: bold***REMOVED***span {    color: red***REMOVED***p span {    display: none***REMOVED***img {    float: right***REMOVED***
+body {    font-size: 16px}p {    font-weight: bold}span {    color: red}p span {    display: none}img {    float: right}
 ```
 
 > Render Tree

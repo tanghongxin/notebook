@@ -35,7 +35,7 @@
 - 事件监听
 
 ```
-<amap-map @complete="loading = false">    <template slot="tools" slot-scope="{ map ***REMOVED***">      <amap-fence-selector :map="map" />    </template></amap-map>
+<amap-map @complete="loading = false">    <template slot="tools" slot-scope="{ map }">      <amap-fence-selector :map="map" />    </template></amap-map>
 ```
 
 - 响应式
