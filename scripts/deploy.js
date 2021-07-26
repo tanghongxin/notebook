@@ -3,7 +3,7 @@ const path = require('path')
 const { zip, COMPRESSION_LEVEL } = require('zip-a-folder')
 const { Log, now } = require('./utils')
 
-const [,,HOST, USERNAME, PASSWORD] = process.argv
+const [,,host, username, password] = process.argv
 
 const ssh = new NodeSSH()
 
@@ -18,11 +18,7 @@ ssh.execCommand = function() {
 
 Log.start('服务器部署')
 ssh
-  .connect({
-    host: HOST,
-    username: USERNAME,
-    password: PASSWORD
-  })
+  .connect({ host, username, password })
   .then(async() => {
     Log.start('打包')
     const distDir = path.join(__dirname, '../docs/.vuepress/dist')
@@ -45,6 +41,7 @@ ssh
     Log.success('解压缩')
 
     Log.start('备份上一版本')
+    // TODO: replace ${now()}.back with ${version} + symbol link
     const backup = `notebook.${now()}.back`
     await ssh
       .execCommand(`mv notebook ${backup}`, { cwd: '/usr/share/nginx' })
