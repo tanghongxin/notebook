@@ -24,6 +24,6 @@
     "zip-a-folder": "^1.0.1"
   },
   "dependencies": {
-    "compression-webpack-plugin": "5"
+    "compression-webpack-plugin": "6"
   }
 }

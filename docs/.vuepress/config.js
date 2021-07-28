@@ -113,7 +113,6 @@ module.exports = () => new Promise(async (resolve) => {
         ...config.plugins,
         ...process.env.NODE_ENV === 'production' ? [
           new CompressionWebpackPlugin({
-            filename: '[path].gz[query]',
             algorithm: 'gzip',
             test: /\.(js|css|json|txt|html|ico|svg|png|TTF)(\?.*)?$/i,
             threshold: 10240,
