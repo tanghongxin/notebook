@@ -1,4 +1,4 @@
-const CompressionWebpackPlugin = require('compression-webpack-plugin')
+// const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const fs = require('fs')
 const path = require('path')
 const junk = require('junk')
@@ -112,16 +112,21 @@ module.exports = () => new Promise(async (resolve) => {
       config.plugins = [
         ...config.plugins,
         ...process.env.NODE_ENV === 'production' ? [
-          new CompressionWebpackPlugin({
-            algorithm: 'gzip',
-            test: /\.(js|css|json|txt|html|ico|svg|png|TTF)(\?.*)?$/i,
-            threshold: 10240,
-            minRatio: 0.7,
-            compressionOptions: {
-              level: 7
-            },
-            deleteOriginalAssets: false
-          })
+          /**
+           * FIXME
+           * 启用后导致自定义插件无法正常工作
+           * 初步断定其 gzip 算法与 nginx 不一致
+           */
+          // new CompressionWebpackPlugin({
+          //   algorithm: 'gzip',
+          //   test: /\.(js|css|json|txt|html|ico|svg|png|TTF)(\?.*)?$/i,
+          //   threshold: 10240,
+          //   minRatio: 0.7,
+          //   compressionOptions: {
+          //     level: 7
+          //   },
+          //   deleteOriginalAssets: false
+          // })
         ] : []
       ]
     }
