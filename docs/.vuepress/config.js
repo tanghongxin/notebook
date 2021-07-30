@@ -82,6 +82,9 @@ module.exports = () => new Promise(async (resolve) => {
     theme: 'default-prefers-color-scheme',
     title: 'Abyssal Notebook',
     description: 'Personal technical notebook collections based on VuePress',
+    head: [
+      ['link', { rel: 'icon', href: 'sea.svg' }]
+    ],
     markdown: {
       lineNumbers: true,
     },
