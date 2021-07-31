@@ -1,8 +1,0 @@
-﻿Python,JSON
-dict,object
-"list, tuple",array
-str,string
-"int, float, int- & float-derived Enums",number
-True,true
-False,false
-None,null

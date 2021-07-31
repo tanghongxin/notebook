@@ -2,6 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const junk = require('junk')
+const locales = require('../../locales')
 
 const NAV_CATEGORY_LANGUAGES = 'languages'
 const NAV_CATEGORY_FRAMEWORKS = 'frameworks'
@@ -24,7 +25,7 @@ const generateItems = relative => new Promise((resolve, reject) => {
   return readdir(path.resolve(__dirname, relative))
     .then(files => {
       return resolve(files.map((child) => ({
-        text: child,
+        text: locales.get(child) || child,
         link: path.normalize(`/${path.relative(__dirname, relative)}/${child}/`),
       })))
     })
