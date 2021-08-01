@@ -33,5 +33,5 @@ em { color: blue; } /* 特性值：2 */
 .apple { color: blue;} /* 特性值：10 */
 p.bright { color:blue; } /* 特性值：11 */
 p.bright em.dark { color: blue; } /* 特性值：22 */
-#id { blue: blue } /* 特性值：100 */
+#id { color: blue } /* 特性值：100 */
 ```

@@ -15,7 +15,7 @@ p { color: red; }
 ### 标签选择器
 
 ```css
-div {    color: red;}
+div { color: red;}
 ```
 
 ### 类选择器
