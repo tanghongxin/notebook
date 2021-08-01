@@ -8,7 +8,7 @@
 
 > 子组件
 
-```
+```typescript
 import { Input } from '@angular/core'
 
 export class test {
@@ -18,6 +18,6 @@ export class test {
 
 > 父组件模板
 
-```
+```typescript
 <app-root></app-root><app-child [name]="'name'"></app-child>
 ```

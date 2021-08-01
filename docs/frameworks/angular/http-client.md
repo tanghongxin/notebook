@@ -4,7 +4,7 @@
 
 > HttpClient.post
 
-```
+```typescript
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
@@ -30,7 +30,7 @@ this.http.post<Hero>(this.heroesUrl, hero, httpOptions)
 
 > HttpClient.get
 
-```
+```typescript
 searchHeroes(term: string): Observable<Hero[]> {
   term = term.trim();
   // Add safe, URL encoded search parameter if there is a search term
@@ -52,7 +52,7 @@ searchHeroes(term: string): Observable<Hero[]> {
 
 比如在发起下一个请求之前，如果旧的令牌已经过期了，你可能还要修改认证头。
 
-```
+```typescript
 httpOptions.headers =
   httpOptions.headers.set('Authorization', 'my-new-auth-token');
 ```

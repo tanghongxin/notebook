@@ -17,7 +17,7 @@
 
 ## 装饰器（注解）
 
-```
+```typescript
 // 设置元数据/meta：用来说明类的信息
 @Component({
   selector: 'app-login', // 类似css选择器, 筛选出<app-login></app-login>组件

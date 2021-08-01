@@ -4,28 +4,47 @@
 
 > ==============================================================================
 
-```
-// [] 表示单向绑定(Angular => HTML)?<option [value]="val"></option>// ()表示单向绑定(HTML => Angular)?<form (ngSubmit)="onSubmit()"></form>// [()]表示双向绑定// 当在表单中使用 [(ngModel)] 时，必须要定义 name 属性(使用任何唯一的值都可以)// 使用 [(ngModel)] 时，每个 input 元素都有 name 属性，Angular 表单用它注册控件<input     type="text"     class="form-control"     name="name"    id="name"    required    [(ngModel)]="model.name">
+```html
+<!-- 表示单向绑定(Angular => HTML) -->
+<option [value]="val"></option>
+<!-- ()表示单向绑定(HTML => Angular) -->
+<form (ngSubmit)="onSubmit()"></form>
+<!-- [()]表示双向绑定
+当在表单中使用 [(ngModel)] 时，必须要定义 name 属性(使用任何唯一的值都可以)
+使用 [(ngModel)] 时，每个 input 元素都有 name 属性，Angular 表单用它注册控件 -->
+<input
+  type="text"
+  class="form-control"
+  name="name"
+  id="name"
+  required 
+  [(ngModel)]="model.name"
+>
+
 ```
 
 > ==============================================================================
 
 ‘#’ 代表引用，类似VUE中的ref?
 
-```
-// 起别名// Angular 会在 <form> 标签上自动创建并附加一个 NgForm 指令<form #heroForm="ngForm">
+```html
+<form #heroForm="ngForm">
 ```
 
 在表单中使用 ngModel 可以获得比仅使用双向数据绑定更多的控制权(双向绑定仅仅是值的绑定？)
 
 > ==============================================================================
 
-[Untitled](%E8%A1%A8%E5%8D%95%20fb1a022c87be45de95dee676838f9746/Untitled%20Database%2032d861975aa748eaa233cb3ce8eaf2fd.csv)
+| 状态                 | 为真时的 CSS 类 | 为假时的 CSS 类 |
+| -------------------- | --------------- | --------------- |
+| 控件被访问过         | ng-touched      | ng-untouched    |
+| 控件的值变化了（脏） | ng-dirty        | ng-pristine     |
+| 控件的值有效         | ng-valid        | ng-invalid      |
 
 // 变化为初始值，是否也为ng-dirty? // Valid与验证器有关？
 
-```
-// <div [hidden]="fasle"> </div> ?
+```html
+<div [hidden]="fasle"> </div>
 ```
 
 > ==============================================================================
@@ -34,8 +53,18 @@
 
 模板驱动验证是采用ngModel监控value，在html模版中写验证器
 
-```
-<input id="name" name="name" class="form-control"      required minlength="4" appForbiddenName="bob"      [(ngModel)]="hero.name" #name="ngModel" >
+```html
+<input
+  id="name"
+  name="name"
+  class="form-control"
+  required
+  minlength="4"
+  appForbiddenName="bob"
+  [(ngModel)]="hero.name"
+  #name="ngModel"
+>
+
 ```
 
 响应式表单验证是将表单元素封装为formControl对象进行管理，验证器是对象的一个方法

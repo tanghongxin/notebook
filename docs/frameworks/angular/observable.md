@@ -15,7 +15,7 @@
 
 可观察对象可以发送多个任意类型的值 —— 字面量、消息、事件等，取消订阅可以用于清除定时器，事件防抖，节流等
 
-```
+```typescript
 // 创建一个 Observable 的实例
 // 参数为观察的函数，当调用实例的subscribe方法时，才是调用这个函数
 const locations = new Observable((observer= {
@@ -66,7 +66,7 @@ myObservable.subscribe(
 
 subscribe() 方法还可以接收定义在同一行中的回调函数
 
-```
+```typescript
 myObservable.subscribe(
   x => console.log('Observer got a next value: ' + x),
   err => console.error('Observer got an error: ' + err),
@@ -86,7 +86,7 @@ RxJS 提供了一种对 Observable 类型的实现，在Observable 成为了Java
 
 > ajax
 
-```
+```typescript
 import { fromPromise } from 'rxjs';
 
 // Create an Observable out of a promise
@@ -101,7 +101,7 @@ data.subscribe({
 
 > 事件
 
-```
+```typescript
 import { fromEvent } from 'rxjs';
  
 const el = document.getElementById('my-element');
@@ -124,7 +124,7 @@ const subscription = mouseMoves.subscribe((evt: MouseEvent) => {
 
 > pipe (管道与流？)
 
-```
+```typescript
 import { filter, map } from 'rxjs/operators';
 
 const squareOdd = of(1, 2, 3, 4, 5)

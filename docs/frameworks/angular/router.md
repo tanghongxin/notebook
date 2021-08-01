@@ -1,6 +1,6 @@
 # 路由
 
-```
+```typescript
 import { RouterModule, Routes } from '@angular/router'
 import { NgModule } from '@angular/core'
 
@@ -31,7 +31,7 @@ export class AppRouting {}
 
 ```
 
-```
+```typescript
 const appRoutes: Routes = [
   { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },
@@ -64,8 +64,18 @@ export class AppModule { }
 
 路由器链接
 
-```
-<nav>  <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>  <a routerLink="/heroes" routerLinkActive="active">Heroes</a></nav><router-outlet></router-outlet>
+```html
+<nav>
+  <a
+    routerLink="/crisis-center"
+    routerLinkActive="active"
+  >Crisis Center</a>
+  <a
+    routerLink="/heroes"
+    routerLinkActive="active"
+  >Heroes</a>
+</nav>
+<router-outlet></router-outlet>
 ```
 
 路由链接的激活状态会向下级联到路由树中的每个层级，所以，父子路由链接可能会同时激活。要覆盖这种行为，可以把 [routerLinkActiveOptions] 绑定为 { exact: true } 表达式，这样 RouterLink 只有当 URL 与当前 URL 精确匹配时才会激活
@@ -74,6 +84,6 @@ export class AppModule { }
 
 路由应用范例中默认不包含路由。 要想在使用 Angular CLI 创建项目时支持路由，请为项目或应用的每个 NgModule 设置 –routing 选项。
 
-```
+```bash
 ng generate module my-module --routing
 ```

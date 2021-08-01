@@ -4,7 +4,7 @@
 
 1. 启用动画模块
 
-```
+```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,7 +22,7 @@ export class AppModule { }
 
 1. 把动画功能导入组件文件中
 
-```
+```typescript
 // 如果你准备在组件文件中使用特定的动画函数，
 // 请从 @angular/animations 中导入这些函数
 import { Component, HostBinding } from '@angular/core';
@@ -38,7 +38,7 @@ import {
 
 1. 添加动画的元数据属性
 
-```
+```typescript
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -49,7 +49,7 @@ import {
 })
 ```
 
-```
+```typescript
 import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations'
 
 export const enrtyAnimation = [

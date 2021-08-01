@@ -12,7 +12,7 @@ constructor(private productService: ProductService)
 
 提供器
 
-```
+```typescript
 providers:[ProductService]
 
 // 等同于
