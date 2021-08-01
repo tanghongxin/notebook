@@ -12,6 +12,18 @@
 
 > 案例
 
-```
- @media screen and (max-width: 768px){    .container{        background-color: pink;        width: 100%;    }}@media screen and (min-width: 768px) and (max-width: 992px){    .container{        background-color: green;        width: 750px;    }}
+```css
+@media screen and (max-width: 768px) {
+  .container {
+    background-color: pink;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    background-color: green;
+    width: 750px;
+  }
+}
 ```

@@ -14,6 +14,23 @@
 
 ## 引入
 
-```
-<head>    <meta charset="utf-8">    <!-- 当页面打开的时候进行页面渲染的时候使用浏览器的最高版本，比如IE就使用edge进行渲染 -->    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <!-- 会根据终端设备的宽度进行自适应，initial-scale缩放比例，user-scalable=0用户不能缩放-->    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">    <title>Bootstrap模板</title>    <!-- Bootstrap 引入bs-css样式-->    <link href="css/bootstrap.min.css" rel="stylesheet">    <!-- HTML5 shiv 和 Respond.js 用于让IE8支持H5元素和 CSS3媒体查询 -->    <!-- 警告：通过 file:// 协议（就是直接将html页面拖拽到浏览器中)访问页面时 Respond.js不起作用 -->    <!--[if lt IE 9]>    <script src="html5shiv/html5shiv.min.js"></script>    <script src="respond/respond.min.js"></script>    <![endif]-->    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery) -->    <script src="jquery/jquery-3.3.1.js"></script>    <!-- 加载 Bootstrap 的所有 JavaScript 插件,也可以根据需要只加载单个插件。 -->    <script src="js/bootstrap.min.js"></script></head>
+```html
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bootstrap模板</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- HTML5 shiv 和 Respond.js 用于让IE8支持H5元素和 CSS3媒体查询 -->
+  <!--
+    [if lt IE 9]>
+      <script src="html5shiv/html5shiv.min.js" />
+      <script src="respond/respond.min.js" />
+    <![endif]
+  -->
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery) -->
+  <script src="jquery/jquery-3.3.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+
+
 ```

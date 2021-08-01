@@ -6,8 +6,16 @@
 
 > 案例
 
-```
-<!-- row --><div class="row">  <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div></div><div class="row">  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div></div>
+```html
+<div class="row">
+  <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
 ```
 
 ### 应用场景
@@ -21,8 +29,34 @@
 
 > 部分源码
 
-```
-.row {  margin-right: -15px;  margin-left: -15px;}.row::before {    display: table;    content: '';}.row::after {    clear:both;}.col-md-2 {  position: relative;  min-height: 1px;  padding-right: 15px;  padding-left: 15px;}@media (min-width: 992px) {  .col-md-2 {    float: left;    width: 20%;  }}
+```css
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row::before {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-md-2 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .col-md-2 {
+    float: left;
+    width: 20%;
+  }
+}
 ```
 
 ## 注意
