@@ -17,14 +17,22 @@
 
 > 问题案例
 
-```
-let divDom = document.querySelector("#div");// 通过attribute接口divDom.name = "123"; // 无效 因为DOM对象没有name这个属性 不能直接映射到HTML标签// 通过propertydivDom.setAttribute('name', '123'); // 生效
+```javascript
+let divDom = document.querySelector("#div");
+// 通过attribute接口divDom.name = "123"
+// 无效 因为DOM对象没有name这个属性 不能直接映射到HTML标签
+// 通过propertydivDom.setAttribute('name', '123')
+// 生效
 ```
 
 - 兼容性
 
 > 问题案例
 
+```javascript
+// ie 6 7 8(Q)
+divDom.setAttribute('name', '123')
+// 不生效setter.....
+// 生效
 ```
-// ie 6 7 8(Q)divDom.setAttribute('name', '123'); // 不生效setter..... // 生效
-```
+
