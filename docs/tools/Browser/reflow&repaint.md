@@ -4,21 +4,49 @@
 
 > 一段HTML代码
 
-```
-<!-- Author:TangHongxin Date:20180728 --><!DOCTYPE html><html lang="zh-CN"><head>    <meta charset="UTF-8">    <link href="style.css" rel="stylesheet">    <title>example</title>  </head>  <body>    <p>        Hello         <span>web performance</span>         students!    </p>    <div>        <img src="awesome-photo.jpg">    </div>  </body></html>
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link href="style.css" rel="stylesheet">
+  <title>example</title>
+</head>
+
+<body>
+  <p> Hello <span>web performance</span> students! </p>
+  <div> <img src="awesome-photo.jpg"> </div>
+</body>
+</html>
 ```
 
 > 一段CSS代码
 
-```
-body {    font-size: 16px}p {    font-weight: bold}span {    color: red}p span {    display: none}img {    float: right}
+```css
+body {
+  font-size: 16px
+}
+
+p {
+  font-weight: bold
+}
+
+span {
+  color: red
+}
+
+p span {
+  display: none
+}
+
+img {
+  float: right
+}
 ```
 
 > Render Tree
 
-[https://note.youdao.com/yws/api/personal/sync?method=download&fileId=00E2BA62E89F4C66A8197787EE1154F9&version=2875&cstk=nZV%20LRV4M&keyfrom=web](https://note.youdao.com/yws/api/personal/sync?method=download&fileId=00E2BA62E89F4C66A8197787EE1154F9&version=2875&cstk=nZV%20LRV4M&keyfrom=web)
-
-image
+![](https://gitee.com/net-space/picture_bed/raw/master/uPic/2021/08/01/%E6%B8%B2%E6%9F%93%E7%BB%93%E6%9E%9C.09-58-00.png)
 
 > 上述过程
 
@@ -30,9 +58,7 @@ image
 
 > 完整过程
 
-[https://note.youdao.com/yws/api/personal/sync?method=download&fileId=0CA2F284E1974454B1C1971BFAD913C6&version=2872&cstk=nZVLRV4M&keyfrom=web](https://note.youdao.com/yws/api/personal/sync?method=download&fileId=0CA2F284E1974454B1C1971BFAD913C6&version=2872&cstk=nZVLRV4M&keyfrom=web)
-
-image
+![](https://gitee.com/net-space/picture_bed/raw/master/uPic/2021/08/01/%E5%90%ABjs%E7%9A%84%E6%B8%B2%E6%9F%93%E7%BB%93%E6%9E%9C.09-58-54.png)
 
 > 到底啥是Reflow和Repaint
 
