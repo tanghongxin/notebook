@@ -1,5 +1,7 @@
 # Tag
 
+> Tag 本质上是一个特殊的 commit id 别名
+
 ## 添加 tag
 
 ```bash
