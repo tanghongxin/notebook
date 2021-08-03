@@ -5,4 +5,5 @@ module.exports = new Map([
   ['detailed-design', '详细设计'],
   ['wechat-mini-programs', '微信小程序'],
   ['amap', '高德地图'],
+  ['browser', '浏览器'],
 ])
