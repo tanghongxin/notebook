@@ -9,9 +9,11 @@ const NAV_CATEGORY_FRAMEWORKS = 'frameworks'
 const NAV_CATEGORY_SE = 'SE'
 const NAV_CATEGORY_IDEA = 'IDEA'
 const NAV_CATEGORY_TOOLS = 'tools'
+const NAV_CATEGORY_OS = 'OS'
 const NAV_CATEGORY_ROBOT = 'robot'
 const NAV_CATEGORIES = [
-  NAV_CATEGORY_LANGUAGES, NAV_CATEGORY_FRAMEWORKS, NAV_CATEGORY_SE, NAV_CATEGORY_IDEA, NAV_CATEGORY_TOOLS, NAV_CATEGORY_ROBOT
+  NAV_CATEGORY_LANGUAGES, NAV_CATEGORY_FRAMEWORKS, NAV_CATEGORY_SE,
+  NAV_CATEGORY_IDEA, NAV_CATEGORY_TOOLS, NAV_CATEGORY_OS, NAV_CATEGORY_ROBOT
 ]
 
 const readdir = dir => new Promise((resolve, reject) => {
@@ -44,9 +46,10 @@ const generateDynamicNavList = () => new Promise(async (resolve) => {
       items: [
         { text: 'IDEA', items: itemsCollection[3] },
         { text: '工具', items: itemsCollection[4] },
+        { text: '操作系统', items: itemsCollection[5] },
       ]
     },
-    { text: '树洞时间', items: itemsCollection[5] },
+    { text: '树洞时间', items: itemsCollection[6] },
   ])
 })
 
