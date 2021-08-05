@@ -20,6 +20,7 @@
     "junk": "^3.1.0",
     "node-ssh": "^11.1.1",
     "vuepress": "^1.8.2",
+    "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0",
     "zip-a-folder": "^1.0.1"
   }

@@ -95,7 +95,11 @@ module.exports = () => new Promise(async (resolve) => {
     plugins: [
       '@vuepress/back-to-top',
       '@vuepress/nprogress',
-      '@vuepress/medium-zoom'
+      '@vuepress/medium-zoom',
+      ['vuepress-plugin-code-copy', {
+        staticIcon: true,
+        successText: '🌈',
+      }],
     ],
     themeConfig: {
       lastUpdated: '最后更新',
