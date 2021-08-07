@@ -48,10 +48,14 @@ ssh
   })
   .then(() => {
     Log.success('服务器部署')
-    process.exit(0)
+    return 0
   })
   .catch((err) => {
     Log.failure('服务器部署')
     console.error(err)
-    process.exit(1)
+    return 1
+  })
+  .finally((code) => {
+    ssh.dispose()
+    process.exit(code)
   })
