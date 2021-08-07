@@ -1,4 +1,4 @@
-const { NodeSSH } = require('node-ssh')
+const { NodeSSH } = require('./node-ssh')
 const path = require('path')
 const { zip, COMPRESSION_LEVEL } = require('zip-a-folder')
 const { Log, now } = require('./utils')
@@ -6,15 +6,6 @@ const { Log, now } = require('./utils')
 const [,,host, username, password] = process.argv
 
 const ssh = new NodeSSH()
-
-const { execCommand } = ssh
-
-// for better log
-ssh.execCommand = function() {
-  return execCommand
-    .apply(this, Array.from(arguments))
-    .then(({ stdout, stderr }) => stderr ? Promise.reject(stderr) : Promise.resolve(stdout))
-}
 
 Log.start('服务器部署')
 ssh
