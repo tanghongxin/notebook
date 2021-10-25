@@ -23,7 +23,7 @@ const readdir = dir => new Promise((resolve, reject) => {
   })
 })
 
-const generateItems = relative => new Promise((resolve, reject) => {
+const generateChildren = relative => new Promise((resolve, reject) => {
   return readdir(path.resolve(__dirname, relative))
     .then(files => {
       return resolve(files.map((child) => ({
@@ -35,21 +35,21 @@ const generateItems = relative => new Promise((resolve, reject) => {
 })
 
 const generateDynamicNavList = () => new Promise(async (resolve) => {
-  const itemsCollection = await Promise.all(NAV_CATEGORIES.map(nc => generateItems(`../${nc}/`)))
+  const itemsCollection = await Promise.all(NAV_CATEGORIES.map(nc => generateChildren(`../${nc}/`)))
 
   resolve([
-    { text: '编程语言', items: itemsCollection[0] },
-    { text: '框架 & 类库', items: itemsCollection[1] },
-    { text: '软件工程', items: itemsCollection[2] },
+    { text: '编程语言', children: itemsCollection[0] },
+    { text: '框架 & 类库', children: itemsCollection[1] },
+    { text: '软件工程', children: itemsCollection[2] },
     {
       text: '其他',
-      items: [
-        { text: 'IDEA', items: itemsCollection[3] },
-        { text: '工具', items: itemsCollection[4] },
-        { text: '操作系统', items: itemsCollection[5] },
+      children: [
+        { text: 'IDEA', children: itemsCollection[3] },
+        { text: '工具', children: itemsCollection[4] },
+        { text: '操作系统', children: itemsCollection[5] },
       ]
     },
-    { text: '树洞时间', items: itemsCollection[6] },
+    { text: '树洞时间', children: itemsCollection[6] },
   ])
 })
 
@@ -79,39 +79,38 @@ const generateDynamicSidebar = () => new Promise(async (resolve) => {
   resolve(sidebar)
 })
 
-module.exports = () => new Promise(async (resolve) => {
+module.exports = new Promise(async (resolve) => {
   const [dynamicSidebar, dynamicNavList] = await Promise.all([generateDynamicSidebar(), generateDynamicNavList()])
 
   resolve({
-    theme: 'default-prefers-color-scheme',
     title: 'Abyssal Notebook',
     description: 'Personal technical notebook collections based on VuePress',
     head: [
-      ['link', { rel: 'icon', href: 'sea.svg' }]
+      ['link', { rel: 'icon', href: '/sea.svg' }]
     ],
-    markdown: {
-      lineNumbers: true,
-    },
     plugins: [
       '@vuepress/back-to-top',
       '@vuepress/nprogress',
       '@vuepress/medium-zoom',
-      ['vuepress-plugin-code-copy', {
-        staticIcon: true,
-        successText: '🌈',
-      }],
+      // TODO
+      // ['vuepress-plugin-code-copy', {
+      //   staticIcon: true,
+      //   successText: '🌈',
+      // }],
     ],
     themeConfig: {
-      lastUpdated: '最后更新',
+      docsDir: 'docs',
+      contributors: false,
+      lastUpdatedText: '最后更新',
       smoothScroll: true,
       displayAllHeaders: true,
       sidebar: dynamicSidebar,
-      nav: [
+      navbar: [
         { text: '关于', link: '/' },
         ...dynamicNavList,
         {
           text: '站内管理',
-          items: [
+          children: [
             { text: 'Azure', link: 'https://dev.azure.com/hongxintang' },
             { text: '阿里云', link: 'https://account.aliyun.com' },
             { text: 'Github', link: 'https://github.com/tanghongxin/notebook.git' }
@@ -119,27 +118,6 @@ module.exports = () => new Promise(async (resolve) => {
         }
       ],
     },
-    configureWebpack: (config) => {
-      config.plugins = [
-        ...config.plugins,
-        ...process.env.NODE_ENV === 'production' ? [
-          /**
-           * FIXME
-           * 启用后导致自定义插件无法正常工作
-           * 初步断定其 gzip 算法与 nginx 不一致
-           */
-          // new CompressionWebpackPlugin({
-          //   algorithm: 'gzip',
-          //   test: /\.(js|css|json|txt|html|ico|svg|png|TTF)(\?.*)?$/i,
-          //   threshold: 10240,
-          //   minRatio: 0.7,
-          //   compressionOptions: {
-          //     level: 7
-          //   },
-          //   deleteOriginalAssets: false
-          // })
-        ] : []
-      ]
-    }
+    bundler: '@vuepress/bundler-vite'
   })
 })

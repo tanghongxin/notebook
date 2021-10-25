@@ -1,0 +1,7 @@
+.sidebar-link ~ .sidebar-sub-headers {
+  display: none
+}
+
+.sidebar-link.active ~ .sidebar-sub-headers {
+  display: revert
+}

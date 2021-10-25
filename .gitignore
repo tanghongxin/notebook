@@ -3,3 +3,5 @@ node_modules
 **/dist.zip
 .DS_Store
 .idea
+docs/.vuepress/.cache
+docs/.vuepress/.temp
