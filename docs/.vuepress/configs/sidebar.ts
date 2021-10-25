@@ -17,7 +17,7 @@ export const generateSidebar = () => new Promise<SidebarConfigArray>(async (reso
         const key = `/${category}/${docs}/`
         sidebar[key] = sidebar[key] || []
         if (doc === 'index.md') {
-          sidebar[key].unshift('')
+          sidebar[key].unshift('index.md')
         } else {
           sidebar[key].push(doc)
         }
