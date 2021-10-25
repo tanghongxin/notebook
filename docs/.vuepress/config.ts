@@ -15,6 +15,19 @@ export default new Promise(async (resolve) => {
       '@vuepress/back-to-top',
       '@vuepress/nprogress',
       '@vuepress/medium-zoom',
+      [
+        '@vuepress/plugin-search',
+        {
+          locales: {
+            '/': {
+              placeholder: '搜索',
+            },
+            '/zh/': {
+              placeholder: '搜索',
+            },
+          },
+        },
+      ]
       // TODO
       // ['vuepress-plugin-code-copy', {
       //   staticIcon: true,
