@@ -54,5 +54,5 @@
 - [text-align](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-align)
 - [text-decoration](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration)
 - [text-indent](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-indent)
-- [user-select](https://developer.mozilla.org/zh-CN/docs/Web/CSS/user-select) <Tag text="CSS3" />
+- [user-select](https://developer.mozilla.org/zh-CN/docs/Web/CSS/user-select) <Badge text="CSS3" />
 - [vertical-align](https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align)

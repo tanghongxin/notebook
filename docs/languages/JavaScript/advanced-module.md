@@ -1,8 +1,8 @@
 # 模块
 
-## ESM <Tag text="TODO" />
+## ESM <Badge text="TODO" type="warning" />
 
-## CJS <Tag text="TODO" />
+## CJS <Badge text="TODO" type="warning" />
 
 // exports === modules.exports
 
@@ -10,8 +10,8 @@
 
 // export = () => {} !xxx 会重新指向而非指向到module.exports
 
-## AMD <Tag text="TODO" />
+## AMD <Badge text="TODO" type="warning" />
 
-## UMD <Tag text="TODO" />
+## UMD <Badge text="TODO" type="warning" />
 
 

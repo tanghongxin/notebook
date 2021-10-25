@@ -1,6 +1,6 @@
 # Restore  (2.23.0)
 
-## TODO <Tag text="TODO" />
+## TODO <Badge text="TODO" type="warning" />
 
 [参考资料](https://zhuanlan.zhihu.com/p/259385054)
 

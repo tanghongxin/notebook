@@ -307,7 +307,7 @@ var date = New Date('1999-02-02 12:12:12');
   /[A-Za-z0-9_]//\w/
   ```
 
-## Symbol <Tag text="TODO" />
+## Symbol <Badge text="TODO" type="warning" />
 
 > Symbol
 
