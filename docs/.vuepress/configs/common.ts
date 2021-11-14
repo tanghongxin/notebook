@@ -16,6 +16,6 @@ export const NAV_CATEGORIES = [
 export const readdir = dir => new Promise<string[]>((resolve, reject) => {
   fs.readdir(dir, (err, files) => {
     if (err) return reject(err)
-    return resolve(files.filter(junk.not))
+    return resolve(files.filter(junk.isNotJunk))
   })
 })
