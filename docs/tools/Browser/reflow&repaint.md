@@ -46,7 +46,7 @@ img {
 
 > Render Tree
 
-![](https://gitee.com/net-space/picture_bed/raw/master/uPic/2021/08/01/%E6%B8%B2%E6%9F%93%E7%BB%93%E6%9E%9C.09-58-00.png)
+![](https://s2.loli.net/2022/03/31/jzC1gpvaE8AoI7P.png)
 
 > 上述过程
 
@@ -58,7 +58,7 @@ img {
 
 > 完整过程
 
-![](https://gitee.com/net-space/picture_bed/raw/master/uPic/2021/08/01/%E5%90%ABjs%E7%9A%84%E6%B8%B2%E6%9F%93%E7%BB%93%E6%9E%9C.09-58-54.png)
+![](https://s2.loli.net/2022/03/31/WbMVYXpmLuBfF6y.png)
 
 > 到底啥是Reflow和Repaint
 

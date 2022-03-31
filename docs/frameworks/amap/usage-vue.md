@@ -17,28 +17,28 @@
 
 - 响应式
 
-![](https://gitee.com/net-space/picture_bed/raw/master/uPic/2021/07/31/5.12-29-52.gif)
+![](https://s2.loli.net/2022/03/31/jtZNLxIhOHJU5kY.gif)
 
 ## 案例
 
 - 事件传递
 
-![](https://gitee.com/net-space/picture_bed/raw/master/uPic/2021/07/31/4.12-31-24.gif)
+![](https://s2.loli.net/2022/03/31/X4VMRedCIgkKFil.gif)
 
 - 组件封装
 
-![](https://gitee.com/net-space/picture_bed/raw/master/uPic/2021/07/31/3.12-32-25.gif)
+![](https://s2.loli.net/2022/03/31/nquJkgPaYQSVRe7.gif)
 
 ## 踩坑点
 
 - 领域知识，文档学习成本
 - 秘钥安全
 
-![](https://gitee.com/net-space/picture_bed/raw/master/uPic/2021/07/31/2.12-33-11.png)
+![](https://s2.loli.net/2022/03/31/PzdWOj3qgbGMI1B.png)
 
 - 缓存
 
-![](https://gitee.com/net-space/picture_bed/raw/master/uPic/2021/07/31/1.12-33-40.png)
+![](https://s2.loli.net/2022/03/31/mvgzRI9GBOPklFc.png)
 
 - 异步等待
 

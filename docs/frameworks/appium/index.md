@@ -14,5 +14,5 @@ appium服务端定义了官方协议的扩展，为appium 用户提供了方便�
 
 ## 工作原理
 
-![](https://gitee.com/net-space/picture_bed/raw/master/uPic/2021/07/31/mvW0RH.12-50-52.jpg)
+![](https://s2.loli.net/2022/03/31/K7BSZtNs89RbJHV.jpg)
 
