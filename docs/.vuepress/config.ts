@@ -1,13 +1,10 @@
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
-import { generateSidebar, generateNavbar } from './configs'
 
 export default new Promise(async (resolve) => {
-  const [sidebar, navbar] = await Promise.all([generateSidebar(), generateNavbar()])
-
   resolve(defineUserConfig<DefaultThemeOptions>({
-    title: 'Abyssal Notebook',
-    description: 'Personal technical notebook collections based on VuePress',
+    title: '#',
+    description: '',
     head: [
       ['link', { rel: 'icon', href: '/sea.svg' }]
     ],
@@ -40,8 +37,17 @@ export default new Promise(async (resolve) => {
       lastUpdatedText: '最后更新',
       smoothScroll: true,
       displayAllHeaders: true,
-      sidebar,
-      navbar,
+      sidebar: false,
+      navbar: [
+        {
+          text: '站内管理',
+          children: [
+            { text: 'Azure', link: 'https://dev.azure.com/hongxintang' },
+            { text: '阿里云', link: 'https://account.aliyun.com' },
+            { text: 'Github', link: 'https://github.com/tanghongxin/notebook.git' }
+          ]
+        }
+      ],
     },
     bundler: '@vuepress/bundler-vite'
   }))
