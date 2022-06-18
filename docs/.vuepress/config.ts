@@ -3,6 +3,7 @@ import type { DefaultThemeOptions } from 'vuepress'
 
 export default new Promise(async (resolve) => {
   resolve(defineUserConfig<DefaultThemeOptions>({
+    base: '/notebook/',
     title: '#',
     description: '',
     head: [
