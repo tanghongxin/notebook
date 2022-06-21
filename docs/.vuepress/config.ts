@@ -1,13 +1,16 @@
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 
+const base = '/notebook/'
+
 export default new Promise(async (resolve) => {
   resolve(defineUserConfig<DefaultThemeOptions>({
-    base: '/notebook/',
+    port: 8080,
+    base,
     title: '#',
     description: '',
     head: [
-      ['link', { rel: 'icon', href: '/sea.svg' }]
+      ['link', { rel: 'icon', href: `${base}sea.svg` }]
     ],
     plugins: [
       '@vuepress/back-to-top',
