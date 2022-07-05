@@ -1,12 +1,16 @@
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 
+const base = '/notebook/'
+
 export default new Promise(async (resolve) => {
   resolve(defineUserConfig<DefaultThemeOptions>({
+    port: 8080,
+    base,
     title: '#',
     description: '',
     head: [
-      ['link', { rel: 'icon', href: '/sea.svg' }]
+      ['link', { rel: 'icon', href: `${base}sea.svg` }]
     ],
     plugins: [
       '@vuepress/back-to-top',
@@ -43,7 +47,7 @@ export default new Promise(async (resolve) => {
           text: '站内管理',
           children: [
             { text: 'Azure', link: 'https://dev.azure.com/hongxintang' },
-            { text: '阿里云', link: 'https://account.aliyun.com' },
+            { text: '腾讯云', link: 'https://cloud.tencent.com/login' },
             { text: 'Github', link: 'https://github.com/tanghongxin/notebook.git' }
           ]
         }

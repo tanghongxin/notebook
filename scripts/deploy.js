@@ -3,7 +3,8 @@ const path = require('path')
 const { zip, COMPRESSION_LEVEL } = require('zip-a-folder')
 const { Log, now } = require('./utils')
 
-const [,,host, username, password] = process.argv
+const [, , host, username, password] = process.argv
+const deployDir = '/www/wwwroot/www'
 
 const ssh = new NodeSSH()
 
@@ -35,13 +36,12 @@ ssh
     // TODO: replace ${now()}.back with ${version} + symbol link
     const backup = `notebook.${now()}.back`
     await ssh
-      .execCommand(`mv notebook ${backup}`, { cwd: '/usr/share/nginx' })
+      .execCommand(`mv notebook ${backup}`, { cwd: deployDir })
       .then(() => Log.success(`备份上一版本 ${backup} `))
       .catch((err) => err.includes('No such file or directory') ? Log.info('暂无上一版本') : Promise.reject(err))
 
     Log.start('部署最新版本')
-    await ssh.execCommand(`mv dist notebook`, { cwd: '/tmp' })
-    await ssh.execCommand(`mv notebook /usr/share/nginx/`, { cwd: '/tmp' })
+    await ssh.execCommand(`mv dist ${deployDir}/notebook`, { cwd: '/tmp' })
     Log.success('部署最新版本')
 
     await clean()
