@@ -47,7 +47,7 @@ export default new Promise(async (resolve) => {
           text: '站内管理',
           children: [
             { text: 'Azure', link: 'https://dev.azure.com/hongxintang' },
-            { text: '阿里云', link: 'https://account.aliyun.com' },
+            { text: '腾讯云', link: 'https://cloud.tencent.com/login' },
             { text: 'Github', link: 'https://github.com/tanghongxin/notebook.git' }
           ]
         }
