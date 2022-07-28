@@ -28,12 +28,13 @@ export default new Promise(async (resolve) => {
             },
           },
         },
-      ]
-      // TODO
-      // ['vuepress-plugin-code-copy', {
-      //   staticIcon: true,
-      //   successText: '🌈',
-      // }],
+      ],
+      ['@snippetors/vuepress-plugin-code-copy', {
+        backgroundTransition: false,
+        successText: '复制成功',
+        successTextColor: '#3AA675',
+        color: 'var(--code-ln-color)',
+      }],
     ],
     themeConfig: {
       docsDir: 'docs',
